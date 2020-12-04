@@ -14,7 +14,7 @@ Het project gaat over het volgende onderwerp:
 Online webapplicatie voor een autogarage.
 De garage heeft behoefte aan een systeem waarmee personeel een klantenbestand kan opzetten.
 Ook is inzichtelijk welke auto's in onderhoud zijn en bij welke klanten horen.
-Zie documentatie garage klik [hier] (https://www.google.com/) om te downloaden
+Zie documentatie garage klik [hier](https://www.google.com/) om te downloaden
 De site die je maakt moet aan de volgende criteria voldoen:
 
 Gemaakt met PHP + MySQL(must have) + (Frontend framework(bijv. Bootstrap) could have)
