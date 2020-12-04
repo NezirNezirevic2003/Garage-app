@@ -1,11 +1,11 @@
-#  Project 2
+# Project 2
 
-## H2 Inleiding
+## Inleiding
 Voor dit project ga je een dynamische website bouwen volgens de Scrum-methode. 
 De opdrachtgevers zijn in dit geval de docenten die je hebt voor het vak Project. Het onderwerp van je site en die eisen die eraan gesteld worden zijn al vastgelegd. Project 2 gaat verder met alle eisen van periode 1. Bij dit project maak je gebruik van de vakken: Ontwerpen, Programmeren, Projectmanagement, Projectcommunicatie.
 Een dynamische website wordt (realtime)opgebouwd met behulp van gegevens uit een database. De output kan verschillen per gebruiker en door de handelingen van de gebruiker. 
 
-##  Leervragen
+## Leervragen
 
 De leervragen die bij dit project horen kan je hier zien, zet het filter bij periode onderwijs op 2 
 
@@ -35,7 +35,7 @@ Per groep wordt een kanaal aangemaakt, waar het team zijn documenten kan oplever
 
  
 
-##  Documentatie
+## Documentatie
 
 De documentatie is van belang om in kaart te brengen wat de klant wil en hoe het gebouwd wordt. 
 
@@ -49,7 +49,7 @@ Planning (klik hier om te downloaden)
 Logboek (klik hier om te downloaden)
  
 
-### H3 Presentatie 
+### Presentatie 
 
 Aan het einde periode presenteer je de dynamische website.
 Iedere sprint review houdt je een presentatie(optioneel: video)
