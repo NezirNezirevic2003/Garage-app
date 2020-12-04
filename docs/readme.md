@@ -82,19 +82,23 @@ Definition of Fun
 Week 1
 Project
 Werken aan programmeer opdrachten uit boek
+
 Week 2
 Project
 Werken aan programmeer opdrachten uit boek
+
 Week 3
 Project
 Definition of Done bepalen
 Wat wil de klant / opdrachtgever bereiken
 Doel van het developmentteam
 Te gebruiken technieken
+
 Week 4: Sprint 1
 Project
 Maken van product
 CRUD van klanten maken / evt. uitbreiden met CRUD van auto’s
+
 Week 5
 Project
 Maken van product
@@ -106,18 +110,15 @@ Project
 Maken van product
 Aantal wensen maken uit wens 1 t/m 6
  
-
 Week 7
 Project
 Maken van product
 Sprintreview (ERD, CRUD auto's,  uitgewerkte wensen 1 t/m 6) + retrospective uitvoeren
  
-
 Week 8: Sprint 3
 Project
 Maken van product
 Aantal wensen maken uit wens 7 t/m 12
-.
 
 Week 9
 
