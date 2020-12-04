@@ -129,13 +129,20 @@ Voortgangstool invullen
 Daily standups: (volgens walk on the board)
 
 Wat is af
+
 Wat moet nog getest worden
+
 Waar ben je nog mee bezig
+
 Waar loop je mee vast (hulp nodig ?) - help geven niet in standup
+
 Wie heeft er niet genoeg te doen, userstories van sprint backlog naar todo (verdelen)
+
 Waarom walk on the board: https://www.youtube.com/watch?v=H02BlTXpcto
+
 Hoe walk on the board: https://www.youtube.com/watch?v=316qdj10j9M
-Eindbeoordeling
+
+**Eindbeoordeling**
 
 Met de voortgangstool(VGT)
 
