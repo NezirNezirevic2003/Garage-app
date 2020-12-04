@@ -14,7 +14,7 @@ Het project gaat over het volgende onderwerp:
 Online webapplicatie voor een autogarage.
 De garage heeft behoefte aan een systeem waarmee personeel een klantenbestand kan opzetten.
 Ook is inzichtelijk welke auto's in onderhoud zijn en bij welke klanten horen.
-Zie documentatie garage klik [hier] (https://o365zadkine.sharepoint.com/teams/Onderwijsdocumenten/Gedeelde%20documenten/Forms/AllItems.aspx?id=%2Fteams%2FOnderwijsdocumenten%2FGedeelde%20documenten%2FGeneral%2FVanaf%202020%2D2021%28Learning%20Matters%29%2FBOL%2FNiveau%204%2FSoftware%20Development%2FCohort%2020%2D21%2FLeerjaar%201%2FBeroepsgericht%2FProject%202%2Fproject2%5Fdynamische%5Fwebsite%2Epdf&parent=%2Fteams%2FOnderwijsdocumenten%2FGedeelde%20documenten%2FGeneral%2FVanaf%202020%2D2021%28Learning%20Matters%29%2FBOL%2FNiveau%204%2FSoftware%20Development%2FCohort%2020%2D21%2FLeerjaar%201%2FBeroepsgericht%2FProject%202&p=true&originalPath=aHR0cHM6Ly9vMzY1emFka2luZS5zaGFyZXBvaW50LmNvbS86YjovdC9PbmRlcndpanNkb2N1bWVudGVuL0VlOGNqaWFhaTQ5RW5uemdPV1J5cEY0QmlVV3pPdXViZjUwaWxNWFc0QlN1U3c_cnRpbWU9aWZwT1J6cVkyRWc) om te downloaden
+Zie documentatie garage klik [hier] (https://www.google.com/) om te downloaden
 De site die je maakt moet aan de volgende criteria voldoen:
 
 Gemaakt met PHP + MySQL(must have) + (Frontend framework(bijv. Bootstrap) could have)
