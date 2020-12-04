@@ -79,54 +79,62 @@ Definition of Fun
 
 ### Projectplanning:
 
-Week 1
+#### Week 1
+
 Project
 Werken aan programmeer opdrachten uit boek
 
-Week 2
+#### Week 2
+
 Project
 Werken aan programmeer opdrachten uit boek
 
-Week 3
+#### Week 3
+
 Project
 Definition of Done bepalen
 Wat wil de klant / opdrachtgever bereiken
 Doel van het developmentteam
 Te gebruiken technieken
 
-Week 4: Sprint 1
+#### Week 4: Sprint 1
+
 Project
 Maken van product
 CRUD van klanten maken / evt. uitbreiden met CRUD van auto’s
 
-Week 5
+#### Week 5
+
 Project
 Maken van product
 Sprintreview (Potentially shippable product, userstories, CRUD klanten, eventueel CRUD auto's, activity en wireframes)
 Retrospective uitvoeren
  
-Week 6: Sprint 2
+#### Week 6: Sprint 2
+
 Project
 Maken van product
 Aantal wensen maken uit wens 1 t/m 6
  
-Week 7
+#### Week 7
+
 Project
 Maken van product
 Sprintreview (ERD, CRUD auto's,  uitgewerkte wensen 1 t/m 6) + retrospective uitvoeren
  
-Week 8: Sprint 3
+#### Week 8: Sprint 3
+
 Project
 Maken van product
 Aantal wensen maken uit wens 7 t/m 12
 
-Week 9
+#### Week 9
 
 Beoordelingsweek
 Sprintreview (eindbeoordeling alle producten) + retrospective uitvoeren
 Voortgangstool invullen
  
-Daily standups: (volgens walk on the board)
+**Daily standups: (volgens walk on the board)**
 
 Wat is af
 
