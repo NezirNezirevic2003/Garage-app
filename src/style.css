@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}  
+
+.navbar-brand{
+  margin-left: 60px;
+}
+
+
+.navbar-nav a{
+  padding: 0 5px;
+}
+
+.foto{
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+
+}
