@@ -1,3 +1,4 @@
+// Validatie voor het formulier
 (function() {
     'use strict';
     window.addEventListener('load', function() {

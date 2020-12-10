@@ -34,7 +34,7 @@ $conn = null;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,7 @@ $conn = null;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
@@ -58,6 +59,9 @@ $conn = null;
             </div>
         </div>
     </nav>
+    <!-- Einde Navigatie menu -->
+
+    <!-- Verzend formulier -->
      <form class="needs-validation" method="post" novalidate>
      <div class="form-row">
          <div class="col-md-4 mb-3">
@@ -99,8 +103,9 @@ $conn = null;
      </div>
      <button class="btn btn-primary" type="submit">Verzenden</button>
      </form>
+    <!-- Einde Verzend formulier -->
 
-
+    <!-- Bootstrap scripts -->
     <script src="./validation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
