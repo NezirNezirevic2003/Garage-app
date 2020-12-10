@@ -1,9 +1,10 @@
 <?php
 
+### Je voegt de database connectie hierin
 include "connection.php";
 
 try {
-    // INSERT query maken en uitvoeren.
+    ### Hier insert je gegevens in sql query op php databse
     $stmt = $conn->prepare("INSERT INTO klantgegevens (voornaam, achternaam, stad, zip, adres) 
     VALUES (:voornaam, :achternaam, :stad, :zip, :adres)");
     $stmt->bindParam(':voornaam', $voornaam);
@@ -12,6 +13,7 @@ try {
     $stmt->bindParam(':zip', $zip);
     $stmt->bindParam(':adres', $adres);
 
+    ### Hier gebeurt er actie alleen als voornaam is ingevuld
     if (isset($_REQUEST['voornaam']))
  {
     $voornaam = $_POST['voornaam'];
@@ -24,7 +26,7 @@ try {
     
 header('Location: dbinsert.php');
     }}
-    
+    ### Als er een fout is krijg je een error op het scherm
 catch(PDOException $e)
     {
     echo "Error: " . $e->getMessage();
