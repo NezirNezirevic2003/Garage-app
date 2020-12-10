@@ -1,5 +1,4 @@
 <?php
-
 ### Je voegt de database connectie hierin
 include "connection.php";
 
