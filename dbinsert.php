@@ -97,7 +97,7 @@ $conn = null;
                <label for="validationCustom05">Adres</label>
          <input type="text" class="form-control" id="adres" name="adres" placeholder="Voer uw adres hier" required>
          <div class="invalid-feedback">
-            Adres code klopt
+            Adres klopt
          </div>
          </div>
      </div>
