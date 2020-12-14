@@ -45,7 +45,7 @@ $conn = null;
 <body>
     <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Garage</a>
+        <a class="navbar-brand" href="./index.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
             <span class="navbar-toggler-icon"></span>
         </button>
