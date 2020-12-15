@@ -36,21 +36,15 @@
 // PDO connect importeren
 include "connection.php";
 
-
-// id ophalen
-$klantid = $_GET['klantid'] ?? null;
-
-
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 // set the PDO error mode to exception
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // als er op de knop is geklikt...
-if (isset($_REQUEST['voornaam']))
+if (isset($_REQUEST['klantnaam']))
  {
 // waarden ophlaen
-$klantid = $_POST['klantid'];
 $klantnaam = $_POST['klantnaam'];
 $klantadres = $_POST['klantadres'];
 $klantpostcode = $_POST['klantpostcode'];
@@ -59,7 +53,7 @@ $klantplaats = $_POST['klantplaats'];
 
 
 // query opstellen
-$sql = "UPDATE klantgegevens SET WHERE klantid = '$klantid', klantnaam = '$klantnaam', klantadres = '$klantadres', klantpostcode = '$klantpostcode', klantplaats = '$klantplaats' "; 
+$sql = "UPDATE klantgegevens SET klantnaam = '$klantnaam', klantadres = '$klantadres', klantpostcode = '$klantpostcode', klantplaats = '$klantplaats'"; 
 
 
 // Prepare statement
@@ -67,10 +61,10 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 echo "Succesvol bijgewerkt";
 // terugsturen naar de hoofdpagina
-header('Location: connection.php');
+header('Location: dbread.php');
  }
 
-$sqlSelect = "SELECT * FROM klantgegevens WHERE klantid = '$klantid'";
+$sqlSelect = "SELECT * FROM klantgegevens";
 $data = $conn->query($sqlSelect);
 $data = $conn->query($sqlSelect);
 
@@ -93,12 +87,3 @@ $conn = null;
 <?
  
 ?>
-
-
-
-
-
-
-   
-
-
