@@ -18,8 +18,12 @@
         </button>
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
-                <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
+            <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
                 <a href="./dbread.php" class="nav-item nav-link">Read</a>
+                <a href="" class="nav-item nav-link">Update</a>
+                <a href="" class="nav-item nav-link">Delete</a>
+                <a href="./dbinsertAuto.php" class="nav-item nav-link">Create</a>
+                <a href="" class="nav-item nav-link">Read</a>
                 <a href="" class="nav-item nav-link">Update</a>
                 <a href="" class="nav-item nav-link">Delete</a>
                 <a href="./login.html" class="nav-item nav-link">Login</a>
