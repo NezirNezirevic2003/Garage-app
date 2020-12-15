@@ -6,7 +6,7 @@ try {
     ### Hier insert je gegevens in sql query op php databse
     $stmt = $conn->prepare("INSERT INTO autogegevens (autokenteken, automerk, autotype, autokmstand, klantid) 
     VALUES (:autokenteken, :automerk, :autotype, :autokmstand, :klantid)");
-    $stmt->bindParam(':autokenteken', $autokenteken);
+    $stmt->bindParam(':autokenteken', $autoKenteken);
     $stmt->bindParam(':automerk', $autoMerk);
     $stmt->bindParam(':autotype', $autoType);
     $stmt->bindParam(':autokmstand', $autoKmStand);
@@ -45,7 +45,7 @@ $conn = null;
 <body>
     <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="./index.html">Garage</a>
+        <a class="navbar-brand" href="./klant.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,10 +53,6 @@ $conn = null;
             <div class="navbar-nav test">
                 <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
                 <a href="./dbread.php" class="nav-item nav-link">Read</a>
-                <a href="" class="nav-item nav-link">Update</a>
-                <a href="" class="nav-item nav-link">Delete</a>
-                <a href="./dbinsertAuto.php" class="nav-item nav-link">Create</a>
-                <a href="" class="nav-item nav-link">Read</a>
                 <a href="" class="nav-item nav-link">Update</a>
                 <a href="" class="nav-item nav-link">Delete</a>
                 <a href="./login.html" class="nav-item nav-link">Login</a>
