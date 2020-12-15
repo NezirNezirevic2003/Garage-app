@@ -40,11 +40,11 @@ $sqlSelect = "SELECT * from klantgegevens";
 $data = $conn->query($sqlSelect);
     
 foreach ($data as $row) {
-    echo $row['voornaam']." ";
-    echo $row['achternaam']." ";
-    echo $row['stad']." ";
-    echo $row['zip']." ";
-    echo $row['adres']." ";
+    echo $row['klantid']." ";
+    echo $row['klantnaam']." ";
+    echo $row['klantadres']." ";
+    echo $row['klantpostcode']." ";
+    echo $row['klantplaats']." ";
     
     echo "</br>";
 }  

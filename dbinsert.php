@@ -1,25 +1,22 @@
 <?php
-### Je voegt de database connectie hierin
+
 include "connection.php";
 
 try {
-    ### Hier insert je gegevens in sql query op php databse
-    $stmt = $conn->prepare("INSERT INTO klantgegevens (voornaam, achternaam, stad, zip, adres) 
-    VALUES (:voornaam, :achternaam, :stad, :zip, :adres)");
-    $stmt->bindParam(':voornaam', $voornaam);
-    $stmt->bindParam(':achternaam', $achternaam);
-    $stmt->bindParam(':stad', $stad);
-    $stmt->bindParam(':zip', $zip);
-    $stmt->bindParam(':adres', $adres);
+    $stmt = $conn->prepare("INSERT INTO klantgegevens (klantnaam, klantadres, klantpostcode, klantplaats) 
+    VALUES (:klantnaam, :klantadres, :klantpostcode, :klantplaats)");
+    $stmt->bindParam(':klantnaam', $klantnaam);
+    $stmt->bindParam(':klantadres', $klantadres);
+    $stmt->bindParam(':klantpostcode', $klantpostcode);
+    $stmt->bindParam(':klantplaats', $klantplaats);
 
     ### Hier gebeurt er actie alleen als voornaam is ingevuld
-    if (isset($_REQUEST['voornaam']))
+    if (isset($_REQUEST['klantnaam']))
  {
-    $voornaam = $_POST['voornaam'];
-    $achternaam = $_POST['achternaam'];
-    $stad = $_POST['stad'];
-    $zip = $_POST['zip'];
-    $adres = $_POST['adres'];
+    $klantnaam = $_POST['klantnaam'];
+    $klantadres = $_POST['klantadres'];
+    $klantpostcode = $_POST['klantpostcode'];
+    $klantplaats = $_POST['klantplaats'];
     $stmt->execute();
 
     
@@ -52,10 +49,10 @@ $conn = null;
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
                 <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
-                <a href="" class="nav-item nav-link">Read</a>
+                <a href="./dbread.php" class="nav-item nav-link">Read</a>
                 <a href="" class="nav-item nav-link">Update</a>
                 <a href="" class="nav-item nav-link">Delete</a>
-                <a href="" class="nav-item nav-link">Login</a>
+                <a href="./login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
@@ -66,38 +63,32 @@ $conn = null;
      <div class="form-row">
          <div class="col-md-4 mb-3">
                <label for="validationCustom01">Voornaam</label>
-         <input type="text" class="form-control" id="voornaam" name="voornaam"  placeholder="Voer uw voornaam in" required>
+         <input type="text" class="form-control" id="klantnaam" name="klantnaam"  placeholder="Voer uw voornaam in" required>
          <div class="valid-feedback">
             Voornaam klopt
          </div>
          </div>
          <div class="col-md-4 mb-3">
-               <label for="validationCustom02">Achternaam</label>
-         <input type="text" class="form-control" id="achternaam" name="achternaam" placeholder="Voer uw achternaam in" required>
+               <label for="validationCustom02">Adres</label>
+         <input type="text" class="form-control" id="klantadres" name="klantadres" placeholder="Voer uw adres hier" required>
          <div class="valid-feedback">
-            Achternaam klopt
+            Adres klopt
          </div>
          </div>
            <div class="form-row">
          <div class="col-md-6 mb-3">
-               <label for="validationCustom03">Stad</label>
-         <input type="text" class="form-control" id="stad" name="stad" placeholder="Voer de naam van uw stad" required>
+               <label for="validationCustom03">Zipcode</label>
+         <input type="text" class="form-control" id="klantpostcode" name="klantpostcode" placeholder="Voer uw zipcode hier" required>
          <div class="invalid-feedback">
-            Stad naam klopt
+            Zipcode klopt
          </div>
          </div>
          <div class="col-md-3 mb-3">
-               <label for="validationCustom05">Zip</label>
-         <input type="text" class="form-control" id="zip" name="zip" placeholder="Voer uw zipcode" required>
+               <label for="validationCustom05">Plaats</label>
+         <input type="text" class="form-control" id="klantplaats" name="klantplaats" placeholder="Voer uw plaats hier" required>
          <div class="invalid-feedback">
-            Zip code klopt
+            Plaats naam klopt
          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-               <label for="validationCustom05">Adres</label>
-         <input type="text" class="form-control" id="adres" name="adres" placeholder="Voer uw adres hier" required>
-         <div class="invalid-feedback">
-            Adres klopt niet
          </div>
          </div>
      </div>
