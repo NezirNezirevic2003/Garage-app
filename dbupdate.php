@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,21 +29,77 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
+
 <?php
-// database gegevens includen.
+
+
+// PDO connect importeren
 include "connection.php";
 
-//select query
-$sqlSelect = "SELECT * from klantgegevens";
+
+// id ophalen
+$id = $_GET['id'];
+
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+// set the PDO error mode to exception
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// als er op de knop is geklikt...
+if (isset($_REQUEST['voornaam']))
+ {
+// waarden ophlaen
+$voornaam = $_POST['voornaam'];
+$achternaam = $_POST['achternaam'];
+$zipcode = $_POST['zipcode'];
+$plaats = $_POST['plaats'];
+
+
+
+// query opstellen
+$sql = "UPDATE test SET voornaam = '$voornaam', achternaam = '$achternaam', leeftijd = '$leeftijd' WHERE id = '$id'";
+
+// Prepare statement
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+echo "Succesvol bijgewerkt";
+// terugsturen naar de hoofdpagina
+header('Location: pdoselect.php');
+ }
+
+$sqlSelect = "SELECT * FROM test WHERE id =$id";
 $data = $conn->query($sqlSelect);
-    
+$data = $conn->query($sqlSelect);
+
+$conn = null;
 foreach ($data as $row) {
-    echo $row['klantid']." ";
-    echo $row['klantnaam']." ";
-    echo $row['klantadres']." ";
-    echo $row['klantpostcode']." ";
-    echo $row['klantplaats']." ";
-    
-    echo "</br>";
-}  
+     
+?>
+<form method='post'><table width='400' border='0' cellspacing='1' cellpadding='2'>
+<tr><td width=100>Voornaam</td><td><input name='voornaam' type='text' id='voornaam' value=<? echo $row['voornaam'] ?>></td></tr>
+<tr><td width='100'>Achternaam</td><td><input name='achternaam' type='text' id='achternaam' value='<? echo $row['achternaam']; ?>'></td>
+</tr><tr>
+<tr><td width='100'>Leeftijd</td><td><input name='leeftijd' type='text' value='<? echo $row['leeftijd']; ?>'></td>
+</tr></table>
+</br>
+<input type="submit" value="Updaten"></td>
+</form>
+<?
+ }
+?>
+<a href="connectpdovoorbeeld.php">PDO connect voorbeeld</a></br>
+<a href="pdoinsertform.php">PDO INSERT FORM</a></br>
+<a href="pdodelete.php">PDO DELETE voorbeeld</a></br>
+<a href="pdoupdate.php">PDO UPDATE voorbeeld</a></br>
+<a href="pdoinsert.php">PDO INSERT voorbeeld zonder FORM</a></br>
+
+<form method="post">
+    <input type="submit" name="submit" value="Klik voor de broncode">
+</form>
+<?php
+}
+
+   show_source(__FILE__);
+
+
 ?>
