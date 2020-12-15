@@ -38,7 +38,8 @@ include "connection.php";
 
 
 // id ophalen
-$id = $_GET['id'];
+$klantid = $_GET['klantid'] ?? null;
+
 
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
@@ -49,57 +50,55 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 if (isset($_REQUEST['voornaam']))
  {
 // waarden ophlaen
-$voornaam = $_POST['voornaam'];
-$achternaam = $_POST['achternaam'];
-$zipcode = $_POST['zipcode'];
-$plaats = $_POST['plaats'];
+$klantid = $_POST['klantid'];
+$klantnaam = $_POST['klantnaam'];
+$klantadres = $_POST['klantadres'];
+$klantpostcode = $_POST['klantpostcode'];
+$klantplaats = $_POST['klantplaats'];
 
 
 
 // query opstellen
-$sql = "UPDATE test SET voornaam = '$voornaam', achternaam = '$achternaam', leeftijd = '$leeftijd' WHERE id = '$id'";
+$sql = "UPDATE klantgegevens SET WHERE klantid = '$klantid', klantnaam = '$klantnaam', klantadres = '$klantadres', klantpostcode = '$klantpostcode', klantplaats = '$klantplaats' "; 
+
 
 // Prepare statement
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 echo "Succesvol bijgewerkt";
 // terugsturen naar de hoofdpagina
-header('Location: pdoselect.php');
+header('Location: connection.php');
  }
 
-$sqlSelect = "SELECT * FROM test WHERE id =$id";
+$sqlSelect = "SELECT * FROM klantgegevens WHERE klantid = '$klantid'";
 $data = $conn->query($sqlSelect);
 $data = $conn->query($sqlSelect);
 
 $conn = null;
-foreach ($data as $row) {
+
      
 ?>
 <form method='post'><table width='400' border='0' cellspacing='1' cellpadding='2'>
-<tr><td width=100>Voornaam</td><td><input name='voornaam' type='text' id='voornaam' value=<? echo $row['voornaam'] ?>></td></tr>
-<tr><td width='100'>Achternaam</td><td><input name='achternaam' type='text' id='achternaam' value='<? echo $row['achternaam']; ?>'></td>
+<tr><td width=100>klantid</td><td><input name='klantid' type='text' id='klantid' value=''></td></tr>
+<tr><td width='100'>klantnaam</td><td><input name='klantnaam' type='text' id='klantnaam' value=''></td>
 </tr><tr>
-<tr><td width='100'>Leeftijd</td><td><input name='leeftijd' type='text' value='<? echo $row['leeftijd']; ?>'></td>
-</tr></table>
+<tr><td width='100'>klantadres</td><td><input name='klantadres' type='text' value=''></td>
+</tr>
+<tr><td width=100>klantpostcode</td><td><input name='klantpostcode' type='text' id='klantpostcode' value=''></td></tr>
+<tr><td width=100>klantplaats</td><td><input name='klantplaats' type='text' id='klantplaats' value='' ></td></tr>
+</table>
 </br>
 <input type="submit" value="Updaten"></td>
 </form>
 <?
- }
+ 
 ?>
-<a href="connectpdovoorbeeld.php">PDO connect voorbeeld</a></br>
-<a href="pdoinsertform.php">PDO INSERT FORM</a></br>
-<a href="pdodelete.php">PDO DELETE voorbeeld</a></br>
-<a href="pdoupdate.php">PDO UPDATE voorbeeld</a></br>
-<a href="pdoinsert.php">PDO INSERT voorbeeld zonder FORM</a></br>
-
-<form method="post">
-    <input type="submit" name="submit" value="Klik voor de broncode">
-</form>
-<?php
-}
-
-   show_source(__FILE__);
 
 
-?>
+
+
+
+
+   
+
+
