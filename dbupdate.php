@@ -30,7 +30,6 @@ header('Location: dbread.php');
 
 $sqlSelect = "SELECT * FROM klantgegevens";
 $data = $conn->query($sqlSelect);
-$data = $conn->query($sqlSelect);
 
 $conn = null;
 
