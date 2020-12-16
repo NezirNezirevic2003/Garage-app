@@ -1,46 +1,9 @@
-<?php
-
-// PDO connect importeren
-include "connection.php";
-
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-// set the PDO error mode to exception
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-// als er op de knop is geklikt...
-if (isset($_REQUEST['klantnaam']))
- {
-// waarden ophlaen
-$klantnaam = $_POST['klantnaam'];
-$klantadres = $_POST['klantadres'];
-$klantpostcode = $_POST['klantpostcode'];
-$klantplaats = $_POST['klantplaats'];
-
-// query opstellen
-$sql = "UPDATE klantgegevens SET klantnaam = '$klantnaam', klantadres = '$klantadres', klantpostcode = '$klantpostcode', klantplaats = '$klantplaats'"; 
-
-// Prepare statement
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-echo "Succesvol bijgewerkt";
-// terugsturen naar de hoofdpagina
-header('Location: dbread.php');
- }
-
-$sqlSelect = "SELECT * FROM klantgegevens";
-$data = $conn->query($sqlSelect);
-
-$conn = null;
-
-?>
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klant</title>
+    <title>Monteur</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -56,55 +19,29 @@ $conn = null;
                 <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
                 <a href="./dbread.php" class="nav-item nav-link">Read</a>
                 <a href="./dbupdate.php" class="nav-item nav-link">Update</a>
-                <a href="./dbdelete.php" class="nav-item nav-link">Delete</a>
+                <a href="" class="nav-item nav-link">Delete</a>
                 <a href="./login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
-    <!-- Einde Navigatie menu -->
 
-    <!-- Verzend formulier -->
-     <form class="needs-validation" method="post" novalidate>
-     <div class="form-row">
-         <div class="col-md-4 mb-3">
-               <label for="validationCustom01">Voornaam</label>
-         <input type="text" class="form-control" id="klantnaam" name="klantnaam"  placeholder="Voer uw voornaam in" required>
-         <div class="valid-feedback">
-            Voornaam klopt
-         </div>
-         </div>
-         <div class="col-md-4 mb-3">
-               <label for="validationCustom02">Adres</label>
-         <input type="text" class="form-control" id="klantadres" name="klantadres" placeholder="Voer uw adres hier" required>
-         <div class="valid-feedback">
-            Adres klopt
-         </div>
-         </div>
-           <div class="form-row">
-         <div class="col-md-6 mb-3">
-               <label for="validationCustom03">Zipcode</label>
-         <input type="text" class="form-control" id="klantpostcode" name="klantpostcode" placeholder="Voer uw zipcode hier" required>
-         <div class="invalid-feedback">
-            Zipcode klopt
-         </div>
-         </div>
-         <div class="col-md-3 mb-3">
-               <label for="validationCustom05">Plaats</label>
-         <input type="text" class="form-control" id="klantplaats" name="klantplaats" placeholder="Voer uw plaats hier" required>
-         <div class="invalid-feedback">
-            Plaats naam klopt
-         </div>
-         </div>
-         </div>
-     </div>
-     <button class="btn btn-primary" type="submit">Verzenden</button>
-     </form>
-    <!-- Einde Verzend formulier -->
-
-    <!-- Bootstrap scripts -->
-    <script src="./validation.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-</body>
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta name="author" content="anjo eijeriks">
+        <meta charset="utf-8">
+        <title>gar-update-klant1.php</title>
+    </head>
+    <body>
+        <h1>garage update klant</h1>
+        <p>
+            
+        </p>
+        <form action="dbupdate2.php" method="post">
+            welk klantid wilt u wijzigen?
+            <input type="text" name="klantid"> <br />
+            <a href="dbupdate2.php"></a><input type="submit">
+            
+        </form>
+    </body>
 </html>
