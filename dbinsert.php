@@ -20,7 +20,7 @@ try {
     $stmt->execute();
 
     
-header('Location: dbinsert.php');
+header('Location: dbread.php');
     }}
     ### Als er een fout is krijg je een error op het scherm
 catch(PDOException $e)

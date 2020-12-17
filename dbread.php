@@ -45,6 +45,7 @@ foreach ($data as $row) {
     echo $row['klantadres']." ";
     echo $row['klantpostcode']." ";
     echo $row['klantplaats']." ";
+    echo "</br>";
     echo "<a href='dbupdate.php?id=$row[klantid]'>Bewerken</a>";
     echo "<a href='dbdelete.php?id=$row[klantid]'>Verwijderen</a>";
     echo "</br>";

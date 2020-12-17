@@ -21,7 +21,6 @@
               <a href="./dbupdate.php" class="nav-item nav-link">Update</a>
               <a href="./dbdelete.php" class="nav-item nav-link">Delete</a>
               <a href="./login.html" class="nav-item nav-link">Login</a>
-              <a href="./auto.html" class="nav-item nav-link">Auto</a>
             </div>
         </div>
     </nav>
