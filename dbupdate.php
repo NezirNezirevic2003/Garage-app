@@ -19,29 +19,18 @@
                 <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
                 <a href="./dbread.php" class="nav-item nav-link">Read</a>
                 <a href="./dbupdate.php" class="nav-item nav-link">Update</a>
-                <a href="" class="nav-item nav-link">Delete</a>
+                <a href="./dbdelete.php" class="nav-item nav-link">Delete</a>
                 <a href="./login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
 
-<!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <meta name="author" content="anjo eijeriks">
-        <meta charset="utf-8">
-        <title>gar-update-klant1.php</title>
-    </head>
-    <body>
-        <h1>garage update klant</h1>
-        <p>
-            
-        </p>
-        <form action="dbupdate2.php" method="post">
-            welk klantid wilt u wijzigen?
-            <input type="text" name="klantid"> <br />
-            <a href="dbupdate2.php"></a><input type="submit">
-            
+    <form action="dbupdate2.php" method="post" class="form-inline">
+       <div class="form-group mx-sm-3 mb-2">
+         <label for="inputPassword2" class="sr-only">Klant-id</label>
+         <input type="text" name="klantidvak" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
+       </div>
+       <input type="submit" class="btn btn-primary mb-2"></input>
         </form>
     </body>
 </html>

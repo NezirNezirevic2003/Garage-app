@@ -33,7 +33,7 @@
          <input type="text" name="klantidvak" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
        </div>
        <input type="submit" class="btn btn-primary mb-2"></input>
-        </form>
+    </form>
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
