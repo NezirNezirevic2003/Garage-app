@@ -3,6 +3,8 @@
     <meta name="author" content="anjo eijeriks">
     <meta charset="utf-8">
     <title>gar-update-klant2.php</title>
+    <link rel="stylesheet" href="./public/style.css">
+
 </head>
 <body>
     <h1>garage update klant 2</h1>

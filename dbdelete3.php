@@ -4,14 +4,10 @@
         <meta name="author" content="Anjo Eijeriks">
         <meta chatset="UTF-8">
         <title>gar-delete-klant3.php</title>  
+        <link rel="stylesheet" href="./public/style.css">
     </head>
     <body>
         <h1>garage delete klant 3</h1>
-        <p>
-           Op klantid gegevens zoeken uit de 
-           tabel klanten van de database garage 
-           zodat ze verwijderd kunnen worden.
-        </p>
         <?php
             // gegevens uit het formulier halen -------
             $klantid = $_POST["klantidvak"];
@@ -27,7 +23,7 @@
                                         where klantid = :klantid");
                 $sql->execute(["klantid" => $klantid]);
  
-                echo "De gegevens zijn verwijderd. <br />";
+                echo "<p>De gegevens zijn verwijderd. <br /></p>";
             }
             else
             {
