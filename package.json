@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/NezirNezirevic2003/Garage-app/issues"
   },
-  "homepage": "https://github.com/NezirNezirevic2003/Garage-app#readme"
+  "homepage": "https://github.com/NezirNezirevic2003/Garage-app#readme",
+  "dependencies": {
+    "deamon": "^1.0.0"
+  }
 }
