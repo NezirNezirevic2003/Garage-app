@@ -1,0 +1,25 @@
+{
+  "name": "garage-app",
+  "version": "1.0.0",
+  "description": "Een applicatie die gemaakt is voor klant en monteur",
+  "main": "klant.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NezirNezirevic2003/Garage-app.git"
+  },
+  "author": "Nezir, Ali, Anthenny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NezirNezirevic2003/Garage-app/issues"
+  },
+  "homepage": "https://github.com/NezirNezirevic2003/Garage-app#readme",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

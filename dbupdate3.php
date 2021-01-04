@@ -4,6 +4,8 @@
 		<meta name="author" content="anjo eieriks">
 		<meta charset="utf-8">
 		<title>gar-update-klant3.php</title>
+        <link rel="stylesheet" href="./public/style.css">
+
 	</head>
 	<body>
 		<h1>Garage Update Klant 3</h1>
