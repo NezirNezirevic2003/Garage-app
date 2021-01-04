@@ -32,11 +32,7 @@
                     echo "<tr>";
                 }
             echo "</tabel>";
-<<<<<<< HEAD
             echo "<a href='public/auto.html'> terug naar het menu </a>";
-=======
-            echo "<a href='./public/klant.html'> terug naar het menu </a>";
->>>>>>> 9f5a0a364d9d53cf861f44df18962aefb12366cc
         ?>
     </body>
 </html>
