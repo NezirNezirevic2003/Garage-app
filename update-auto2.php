@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
+    <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update 3</title>
+    <title>Update 2</title>
     <link rel="stylesheet" href="./public/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -25,47 +26,64 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-		<h1>Garage Update Klant 3</h1>
-		<p>
-			Klantgegevens wijzigen in de tabel
-			klant van de database garage.
-		</p>
-		<?php
-			// klantgegevens uit het formulier halen -------------------------
-			$klantid		= $_POST["klantid"];
-			$klantnaam		= $_POST["klantnaam"];
-			$klantadres		= $_POST["klantadres"];
-			$klantpostcode	= $_POST["klantpostcode"];
-			$klantplaats	= $_POST["klantplaats"];
 
-			// update klantgegevens ------------------------------------------
-			require_once "connection.php";
+        <h1> Update auto 2 </h1>
+        <p>
+            <?php 
+            $autokenteken= $_POST["autokenteken"];
+            require_once "connection.php";
 
-			$sql = $conn->prepare
-			("
-				update klantgegevens set 	klantnaam 		= :klantnaam,
-									klantadres 		= :klantadres,
-									klantpostcode 	= :klantpostcode,
-									klantplaats 	= :klantplaats
-									where klantid = :klantid
-			");
+            $autos = $conn->prepare(" 
+                                     select
+                                        autokenteken,
+                                        automerk,
+                                        autotype,
+                                        autokmstand,
+                                        klantid
+                                from  autogegevens
+                                where   autokenteken = :autokenteken");
+$autos->execute(["autokenteken" => $autokenteken]);
 
-			$sql->execute
-			([
-				"klantid"		=> $klantid,
-				"klantnaam"		=> $klantnaam,
-				"klantadres"	=> $klantadres,
-				"klantpostcode"	=> $klantpostcode,
-				"klantplaats"	=> $klantplaats
-            ]);
+echo "<form action ='update-auto3.php' method='post'>";
+     foreach ($autos as $auto )
+     {
 
-			echo "De klant is gewijzigd. <br />";
-			echo "<a href='./klant.html'> terug naar het menu </a>";
-		?>
-		    <!-- Bootstrap scripts -->
-			<script src="./validation.js"></script>
+
+         echo "autokenteken: <input type='text'" ;
+         echo "name = 'autokenteken'";
+         echo "value = '" .$auto["autokenteken"]. "' " ;
+         echo "> </br>" ;
+
+         echo " autotype : <input type='text' " ;
+         echo "name = 'autotypevak'" ;
+         echo "value = '" . $auto["autotype"]. "'" ;
+         echo "> </br>" ;
+
+         echo " automerk: <input type='text' " ;
+         echo "name = 'automerkvak'" ;
+         echo "value = '" . $auto["automerk"]. "'" ;
+         echo "> </br>" ;
+
+      
+         echo " autokmstand : <input type='text' " ;
+         echo "name = 'autokmstandvak'" ;
+         echo "value = '" . $auto["autokmstand"]. "'" ;
+         echo "> </br>" ;
+     
+     
+         echo " klantid :". $auto["klantid"];
+         echo " <input type='hidden' name='klantidvak' " ;
+         echo "value = ' " . $auto["klantid"]."'> <br/> " ;
+        }
+         echo "<input type='submit'>";
+         echo "</form>";
+         ?>
+
+
+    <!-- Bootstrap scripts -->
+    <script src="./validation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-	</body>
+    </body>
 </html>
