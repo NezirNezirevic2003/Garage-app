@@ -21,7 +21,7 @@
                 <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
                 <a href="update-auto1.php" class="nav-item nav-link">Update</a>
                 <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
-                <a href="login.html" class="nav-item nav-link">Login</a>
+                <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
@@ -30,7 +30,18 @@
         <h1> Update auto 2 </h1>
         <p>
             <?php 
+
+            // $result = ("SELECT * FROM autogegevens WHERE autokenteken = 'autokenteken'");
+            // if ($result = null){
+            //     echo "wordt niet herkend";
+            // } else{
+            //     $autokenteken= $_POST["autokenteken"];
+            // }
+
             $autokenteken= $_POST["autokenteken"];
+            
+            
+            
             require_once "connection.php";
 
             $autos = $conn->prepare(" 

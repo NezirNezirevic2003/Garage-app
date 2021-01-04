@@ -52,12 +52,7 @@
                     echo "<tr>";
                 }
             echo "</tabel>";
-<<<<<<< HEAD
             echo "<a href='public/auto.html'> terug naar het menu </a>";
-=======
-            echo "<a href='./public/klant.html'> terug naar het menu </a>";
-
->>>>>>> 2ad2601a04ba7988f72a95b42fcfb09960e0cffc
         ?>
     </body>
 </html>
