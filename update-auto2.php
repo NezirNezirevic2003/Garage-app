@@ -17,16 +17,16 @@
         </button>
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
-                <a href="../dbinsertAuto.php" class="nav-item nav-link">Create</a>
-                <a href="../dbreadauto.php" class="nav-item nav-link">Read</a>
-                <a href="" class="nav-item nav-link">Update</a>
-                <a href="" class="nav-item nav-link">Delete</a>
+                <a href="dbinsertAuto.php" class="nav-item nav-link">Create</a>
+                <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
+                <a href="update-auto1.php" class="nav-item nav-link">Update</a>
+                <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
                 <a href="./login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-    
+
         <h1> Update auto 2 </h1>
         <p>
             <?php 

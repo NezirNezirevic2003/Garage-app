@@ -10,20 +10,21 @@
 <body>
     <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="./public/klant.html">Garage</a>
+        <a class="navbar-brand" href="./public/auto.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
-                <a href="./dbinsert.php" class="nav-item nav-link">Create</a>
-                <a href="./dbread.php" class="nav-item nav-link">Read</a>
-                <a href="./dbupdate.php" class="nav-item nav-link">Update</a>
-                <a href="./dbdelete.php" class="nav-item nav-link">Delete</a>
-                <a href="./public/login.html" class="nav-item nav-link">Login</a>
+                <a href="dbinsertAuto.php" class="nav-item nav-link">Create</a>
+                <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
+                <a href="update-auto1.php" class="nav-item nav-link">Update</a>
+                <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="./login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
+    <!-- Einde Navigatie menu -->
 
     <form action="dbupdate2.php" method="post" class="form-inline">
        <div class="form-group mx-sm-3 mb-2">
