@@ -17,7 +17,7 @@
 
             // select query
             $sqlSelect = "SELECT * from autogegevens";
-            $auto = $conn->query($sqlSelect);
+            $autos = $conn->query($sqlSelect);
 
 
             echo "<tabel>";
@@ -32,7 +32,7 @@
                     echo "<tr>";
                 }
             echo "</tabel>";
-            echo "<a href='../auto.html'> terug naar het menu </a>";
+            echo "<a href='public/auto.html'> terug naar het menu </a>";
         ?>
     </body>
 </html>

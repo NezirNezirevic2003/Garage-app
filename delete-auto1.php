@@ -5,7 +5,7 @@
         <meta chatset="UTF-8">
         <title>gar-delete-auto1.php</title>  
     </head>
-    <body>
+    <body>   
         <h1>garage delete auto 1</h1>
         <p>
            Dit formulier zoekt een auto op uit
@@ -13,9 +13,11 @@
            om hem te kunnen verwijderen.
         </p>
         <form action="delete-auto2.php" method="post">
-            Welk autokenteken wilt u verwijderen?
-            <input type="text" name="autokenteken"> <br />
-            <input type="submit">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Autokenteken</label>
+            <input name="autokentekenvak" type="text"  class="form-control" id="inputPassword2" placeholder="Plaats Autokenteken hier" value="">
+        </div>
+            <input type="submit" class="btn btn-danger mb-2">
         </form>
     </body>
 </html>

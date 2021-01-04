@@ -14,11 +14,12 @@
         </p>
         <?php
             // Auto kenteken uit het formulier halen
-            $autokenteken = $_POST["autokenteken"];
+            $autokenteken = $_POST["autokentekenvak"];
 
             // autogegevens uit de tabel halen.
             require_once "connection.php";
 
+            // autogegevens uit de tabel halen
              $autos = $conn->prepare("
                                         select autokenteken,
                                                automerk,
