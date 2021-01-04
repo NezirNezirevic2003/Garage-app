@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/NezirNezirevic2003/Garage-app#readme",
   "dependencies": {
-    "deamon": "^1.0.0"
+    "nodemon": "^2.0.6"
   }
 }
