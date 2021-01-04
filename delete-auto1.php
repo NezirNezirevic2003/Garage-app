@@ -6,7 +6,7 @@
         <title>gar-delete-auto1.php</title>  
     </head>
     <body>   
-        <h1>garage delete auto 1</h1>
+        <h1>Delete auto 1</h1>
         <p>
            Dit formulier zoekt een auto op uit
            de tabel auto van database garage

@@ -6,7 +6,7 @@
         <title>gar-delete-auto2.php</title>  
     </head>
     <body>
-        <h1>garage delete auto 2</h1>
+        <h1>Delete auto 2</h1>
         <p>
            Op autokenteken gegevens zoeken uit de
            tabel auto van de database garage
