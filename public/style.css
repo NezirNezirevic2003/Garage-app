@@ -73,7 +73,7 @@ header .overlay {
 }
 
 .bg-image {
-  background-image: url('./assets/car-mechanic.jpg');
+  background-image: url('../assets/car-mechanic.jpg');
   background-size: cover;
   background-position: center;
 }

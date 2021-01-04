@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./public/style.css">
     <title>Klant</title>
 </head>
 <body>
     <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="./klant.html">Garage</a>
+        <a class="navbar-brand" href="./public/klant.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
               <a href="./dbread.php" class="nav-item nav-link">Read</a>
               <a href="./dbupdate.php" class="nav-item nav-link">Update</a>
               <a href="./dbdelete.php" class="nav-item nav-link">Delete</a>
-              <a href="./login.html" class="nav-item nav-link">Login</a>
+              <a href="./public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
