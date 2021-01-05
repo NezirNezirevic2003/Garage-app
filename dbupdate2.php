@@ -31,6 +31,7 @@
     </p>
     <?php
     include 'connection.php';
+      $klantid = $_POST["klantid"] ;
       $klantid = $_POST["klantidvak"] ;
       require_once "connection.php" ;
  
