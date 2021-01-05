@@ -32,13 +32,13 @@
 <?php 
             //autogegevens uit het formulier halen.
 
-            $autokenteken= $_POST["autokentekenvak"];
+            $autokenteken= $_POST["autokenteken"];
             $autotype= $_POST["autotypevak"];
             $automerk= $_POST["automerkvak"];
             $autokmstand= $_POST["autokmstandvak"];
 
         // connect met database
-        require_once "gar-connect-auto.php";
+        require_once "connection.php";
 
         $sql = $conn->prepare
         ("  
