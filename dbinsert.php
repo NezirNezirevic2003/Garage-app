@@ -59,41 +59,47 @@ $conn = null;
     <!-- Einde Navigatie menu -->
 
     <!-- Verzend formulier -->
-     <form class="needs-validation" method="post" novalidate>
+    <div id="test12" class="container">
+    <form class="needs-validation" method="post" novalidate>
      <div class="form-row">
-         <div class="col-md-4 mb-3">
+         <div style="margin-top: 50px" class="col-md-12 mb-4">
                <label for="validationCustom01">Voornaam</label>
          <input type="text" class="form-control" id="klantnaam" name="klantnaam"  placeholder="Voer uw voornaam in" required>
-         <div class="valid-feedback">
-            Voornaam klopt
+         <div class="invalid-feedback">
+            Voornaam klopt niet
          </div>
          </div>
-         <div class="col-md-4 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom02">Adres</label>
          <input type="text" class="form-control" id="klantadres" name="klantadres" placeholder="Voer uw adres hier" required>
-         <div class="valid-feedback">
-            Adres klopt
+         <div class="invalid-feedback">
+            Adres klopt niet
          </div>
          </div>
            <div class="form-row">
-         <div class="col-md-6 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom03">Zipcode</label>
          <input type="text" class="form-control" id="klantpostcode" name="klantpostcode" placeholder="Voer uw zipcode hier" required>
          <div class="invalid-feedback">
-            Zipcode klopt
+            Zipcode klopt niet
          </div>
          </div>
-         <div class="col-md-3 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom05">Plaats</label>
          <input type="text" class="form-control" id="klantplaats" name="klantplaats" placeholder="Voer uw plaats hier" required>
          <div class="invalid-feedback">
-            Plaats naam klopt
+            Plaats naam klopt niet
          </div>
          </div>
          </div>
      </div>
      <button class="btn btn-primary" type="submit">Verzenden</button>
      </form>
+
+    </div>
+    
+
+    
     <!-- Einde Verzend formulier -->
 
     <!-- Bootstrap scripts -->

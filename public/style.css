@@ -53,6 +53,8 @@ header .overlay {
   z-index: 1;
 }
 
+
+
 @media (pointer: coarse) and (hover: none) {
   header {
     background: url('../assets/videos/backgroundvideo.mp4') black no-repeat center center scroll;
@@ -166,4 +168,5 @@ header .overlay {
     color: #777;
   }
 }
+
 

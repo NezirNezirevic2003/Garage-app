@@ -43,18 +43,18 @@
                 foreach($autos as $auto)
                 {
                     echo "<tr>";
-                    echo "<td>"."Autokenteken: ". $auto["autokenteken"] . "</td>"."<br/>";
+                    echo "<td>"."Autokenteken: " . $auto["autokenteken"] . "</td>"."<br/>";
                     echo "<td>"."Automerk: " . $auto["autotype"] . "</td>"."<br/>";
                     echo "<td>"."Automerk: " . $auto["automerk"] . "</td>"."<br/>";
                     echo "<td>"."Autokmstand: " . $auto["autokmstand"] . "</td>"."<br/>";
                     echo "<td>"."Klantid: " . $auto["klantid"] . "</td>"."<br/>"."<br/>";
                     echo "</br>";
-                    echo "<button type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
-                    echo "<button style='margin-left: 10px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button>";
+                    echo "<button style='margin-top: -90px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -90px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button>";
                     echo "</br>";
                 }
             echo "</tabel>";
-            echo "<button type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button>";
+            echo "<button style='margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button>";
         ?>
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
