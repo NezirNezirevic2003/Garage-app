@@ -23,7 +23,7 @@ try {
     $stmt->execute();
 
     
-header('Location: dbinsertAuto.php');
+header('Location: dbreadauto.php');
     }}
     ### Als er een fout is krijg je een error op het scherm
 catch(PDOException $e)
