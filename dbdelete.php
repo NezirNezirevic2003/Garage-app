@@ -2,28 +2,6 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<<<<<<< HEAD
-<meta name="author"content="Anjo Eijeriks">
-<meta chatset="UTF-8">
-<title>gar-delete-klant1.php</title>
-</head>
-<body>
-<h1>garage delete klant 1</h1>
-<p>
-           Dit formulier zoekt een klant op uit
-           de tabel klanten van database garage
-           om hem te kunnen verwijderen.
-</p>
-<form action="dbdelete2.php"method="post">
-            Welk klantid wilt u verwijderen?
-<input type="text"name="klantid"><br/>
-<input type="submit">
-</form>
-</body>
-</html>
-
- 
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -63,5 +41,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
->>>>>>> f7fdd97248f0a7efa8c3ce8ebb264d314fd73ad1
 
