@@ -30,7 +30,7 @@
                 echo "De gegevens zijn niet verwijderd. <br />";
             }
  
-            echo "<a href='./dbread.php'> Trug naar het menu. </a>";
+            echo "<a href='dbread.php'> Trug naar het menu. </a>";
         ?>
     </body>
 </html>

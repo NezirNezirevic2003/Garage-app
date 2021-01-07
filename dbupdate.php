@@ -18,21 +18,22 @@
             <div class="navbar-nav test">
                 <a href="dbinsertAuto.php" class="nav-item nav-link">Create</a>
                 <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
-                <a href="update-auto1.php" class="nav-item nav-link">Update</a>
-                <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="dbupdate2.php" class="nav-item nav-link">Update</a>
+                <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
     
-    
-    <form action="dbupdate2.php" method="post" class="form-inline">
-       <div class="form-group mx-sm-3 mb-2">
+    <div class="container">
+    <form style="margin-top: 50px" action="dbupdate2.php" method="post" class="form-inline">
+       <div class="form-group mx-sm-12 mb-10">
          <label for="inputPassword2" class="sr-only">Klant-id</label>
          <input type="text" name="klantidvak" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
+       <button style="margin-top: 20px" class="btn btn-primary mb-5" type="submit">Verzenden</button>
        </div>
-       <input type="submit" class="btn btn-primary mb-2"></input>
         </form>
     </body>
+    </div>
 </html>
