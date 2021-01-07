@@ -62,47 +62,50 @@ $conn = null;
     <!-- Einde Navigatie menu -->
 
     <!-- Verzend formulier -->
-     <form class="needs-validation" method="post" novalidate>
-     <div class="form-row">
-         <div class="col-md-4 mb-3">
+    <div class="container">
+    <form class="needs-validation" method="post" novalidate>
+     <div style="margin-top: 50px" class="form-row">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom01">Autokenteken</label>
          <input type="text" class="form-control" id="autokenteken" name="autokenteken"  placeholder="Voer het kenteken nummer in" required>
-         <div class="valid-feedback">
-            Autokenteken klopt.
+         <div class="invalid-feedback">
+            Autokenteken klopt niet
          </div>
          </div>
-         <div class="col-md-4 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom02">Automerk</label>
          <input type="text" class="form-control" id="automerk" name="automerk" placeholder="Voer het automerk in" required>
-         <div class="valid-feedback">
-            Automerk klopt.
+         <div class="invalid-feedback">
+            Automerk klopt niet
          </div>
          </div>
            <div class="form-row">
-         <div class="col-md-6 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom03">Autotype</label>
          <input type="text" class="form-control" id="autotype" name="autotype" placeholder="Voer het type auto in." required>
          <div class="invalid-feedback">
-            Type auto klopt
+            Type auto klopt niet
          </div>
          </div>
-         <div class="col-md-3 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom05">Auto kilometer stand</label>
          <input type="text" class="form-control" id="autokmstand" name="autokmstand" placeholder="Voer de kilometer stand van de auto in" required>
          <div class="invalid-feedback">
-            Kilometer stand klopt.
+            Kilometer stand klopt niet
          </div>
          </div>
-         <div class="col-md-3 mb-3">
+         <div class="col-md-12 mb-4">
                <label for="validationCustom05">Klant id</label>
          <input type="text" class="form-control" id="klantid" name="klantid" placeholder="Voer hier de klantid in" required>
          <div class="invalid-feedback">
-            Klantid klopt.
+            Klantid klopt niet
          </div>
          </div>
      </div>
      <button class="btn btn-primary" type="submit">Verzenden</button>
      </form>
+    </div>
+     
     <!-- Einde Verzend formulier -->
 
     <!-- Bootstrap scripts -->

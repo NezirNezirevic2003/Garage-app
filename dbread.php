@@ -37,17 +37,22 @@ include "connection.php";
 
 //select query
 $sqlSelect = "SELECT * from klantgegevens";
-$data = $conn->query($sqlSelect);
+$klanten = $conn->query($sqlSelect);
     
-foreach ($data as $row) {
-    echo $row['klantid']." ";
-    echo $row['klantnaam']." ";
-    echo $row['klantadres']." ";
-    echo $row['klantpostcode']." ";
-    echo $row['klantplaats']." ";
-    echo "</br>";
-    echo "<a href='dbupdate.php?id=$row[klantid]'>Bewerken</a>";
-    echo "<a href='dbdelete.php?id=$row[klantid]'>Verwijderen</a>";
-    echo "</br>";
-}  
+echo "<tabel>";
+                foreach($klanten as $klant)
+                {
+                    echo "<tr>";
+                    echo "<td>"."Klantid: " . $klant["klantid"] . "</td>"."<br/>";
+                    echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
+                    echo "<td>"."Klantadres: " . $klant["klantadres"] . "</td>"."<br/>";
+                    echo "<td>"."Klantpostcode: " . $klant["klantpostcode"] . "</td>"."<br/>";
+                    echo "<td>"."Klantplaats: " . $klant["klantplaats"] . "</td>"."<br/>"."<br/>";
+                    echo "</br>";
+                    echo "<button style='margin-top: -90px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdate.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -90px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdelete.php?id=[klantid]'>Verwijderen</a></button>";
+                    echo "</br>";
+                }
+            echo "</tabel>";
+            echo "<button style='margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button>"; 
 ?>

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<!doctype html>
-<html lang="nl">
-    <head>
-        <meta name="author" content="Anjo Eijeriks">
-        <meta chatset="UTF-8">
-        <title>gar-delete-klant2.php</title>  
-    </head>
-    <body>
-        <h1>garage delete klant 2</h1>
-=======
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -38,7 +27,6 @@
     <!-- Einde navigatie menu -->
 
     <h1>garage delete klant 2</h1>
->>>>>>> f7fdd97248f0a7efa8c3ce8ebb264d314fd73ad1
         <p>
            Op klantid gegevens zoeken uit de
            tabel klanten van de database garage
@@ -46,11 +34,7 @@
         </p>
         <?php
             // klantid uit het formulier halen --------------
-<<<<<<< HEAD
-            $klantid = $_POST["klantid"];
-=======
             $klantid = $_POST["klantidvak"];
->>>>>>> f7fdd97248f0a7efa8c3ce8ebb264d314fd73ad1
  
             // klantgegevens uit de tabel halen -------------
             require_once "connection.php";
@@ -88,14 +72,10 @@
                 echo "<input type='submit'>";
             echo "</form>";
         ?>
-<<<<<<< HEAD
-    </body>
-=======
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
->>>>>>> f7fdd97248f0a7efa8c3ce8ebb264d314fd73ad1
 </html>
