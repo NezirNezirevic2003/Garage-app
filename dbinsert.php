@@ -95,10 +95,7 @@ $conn = null;
      </div>
      <button class="btn btn-success" type="submit">Verzenden</button>
      </form>
-
-    </div>
-    
-
+     </div>
     
     <!-- Einde Verzend formulier -->
 

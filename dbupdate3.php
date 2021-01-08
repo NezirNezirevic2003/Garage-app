@@ -25,11 +25,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-		<h1>Garage Update Klant 3</h1>
-		<p>
-			Klantgegevens wijzigen in de tabel
-			klant van de database garage.
-		</p>
 		<?php
 			// klantgegevens uit het formulier halen -------------------------
 			$klantid		= $_POST["klantid"];

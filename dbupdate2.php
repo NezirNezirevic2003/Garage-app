@@ -24,11 +24,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-    <h1>garage update klant 2</h1>
-    <p>
-        dit formulier wordt gebruikt om klantgegevens te wijzigen
-        in de tabel klant van de database garage 
-    </p>
     <?php
     require_once "connection.php";
       $klantid = $_POST["klantid"];
@@ -41,39 +36,45 @@
       $klanten = $conn->prepare("SELECT klantid, klantnaam, klantadres, klantpostcode, klantplaats FROM klantgegevens WHERE  klantid = :klantid");
       $klanten->execute(["klantid" => $klantid]);
  
-      echo "<form action ='./dbupdate3.php' method='post'>";
+      echo "<form style='margin-top: 50px' action ='./dbupdate3.php' method='post'>";
       foreach ($klanten as $klant){
                 
-                echo " klantid:" . $klant ["klantid"];
                 echo " <input type='hidden' name='klantid' ";
                 echo " value=' " . $klant ["klantid"] . " '> <br /> ";
- 
-                echo " klantnaam: <input type='text' ";
+                
+                echo "<div class='container'><label for='validationCustom01'>Klantnaam</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' ";
                 echo " name = 'klantnaam' ";
                 echo " value = ' " .$klant ["klantnaam"]. "' ";
-                echo " > <br />";
+                echo " ></div> <br />";
  
-                echo " klantadres: <input type='text' ";
+                echo " <div class='container'><label for='validationCustom01'>Klantadres</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' ";
                 echo " name = 'klantadres' ";
                 echo " value = ' " .$klant ["klantadres"]. "' ";
-                echo " > <br />";
+                echo " ></div> <br />";
  
-                echo " klantpostcode: <input type='text' ";
+                echo " <div class='container'><label for='validationCustom01'>Klantpostcode</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' ";
                 echo " name = 'klantpostcode' ";
                 echo " value = ' " .$klant ["klantpostcode"]. "' ";
-                echo " > <br />";
- 
-                echo " klantplaats: <input type='text' ";
+                echo " ></div> <br />";
+                
+                echo " <div class='container'><label for='validationCustom01'>Klantplaats</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' ";
                 echo " name = 'klantplaats' ";
                 echo " value = ' " .$klant ["klantplaats"]. "' ";
-                echo " > <br />";
+                echo " ><div> <br />";
                 }
-                echo "<input type='submit'>";
+                echo "<button class='btn btn-success'><a style='color: white; text-decoration: none;' type='submit'>Update</a></button>";
                 echo "</form>";
                 }else {
-                    echo"<script type='text/javascript'>alert   ('Foutmelding...');</script>";
-                    echo "Foutmelding: er is geen waarde gevonden.."; } 
+                    echo"<div style='text-align: center;' class='alert alert-danger' role='alert'><p style='margin-bottom: 5px;'>Er is een fout opgetreden: klant-id niet gevonden</p></div>";
+                 } 
             
     ?>
 </body>
 </html>
+
+<!-- <div class="input-group input-group-sm mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+</div>
