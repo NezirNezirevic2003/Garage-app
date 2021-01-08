@@ -3,7 +3,7 @@
     <head>
         <meta name="author" content="Anjo Eijeriks">
         <meta chatset="UTF-8">
-        <title>gar-delete-klant3.php</title>  
+        <title>Klant | Delete</title>  
         <link rel="stylesheet" href="./public/style.css">
     </head>
     <body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete </title>
+    <title>Auto | Delete</title>
     <link rel="stylesheet" href="./public/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -31,13 +31,16 @@
            de tabel auto van database garage
            om hem te kunnen verwijderen.
         </p>
+        <div class="container">
         <form action="delete-auto2.php" method="post">
         <div class="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" class="sr-only">Autokenteken</label>
             <input name="autokentekenvak" type="text"  class="form-control" id="inputPassword2" placeholder="Plaats Autokenteken hier" value="">
-        </div>
             <input type="submit" class="btn btn-danger mb-2">
+        </div>
         </form>
+        </div>
+        
 
 
     <!-- Bootstrap scripts -->
