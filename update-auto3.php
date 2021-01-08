@@ -57,7 +57,7 @@
         ]) ;
 
         echo "De auto is gewijzigd . <br/>";
-        echo "<a href='public/auto.html'> Trug naar het menu. </a>";
+        echo "<a href='dbreadauto.php'> Trug naar het menu. </a>";
         ?>
 
 

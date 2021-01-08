@@ -26,13 +26,16 @@
     </nav>
     <!-- Einde Navigatie menu -->
 
-<h1> Update auto 1 </h1>
-<p>Dit formulier wordt gebruikt om autogegevens te wijzigen . </p>
-<form action="update-auto2.php" method="post">
-    Welk autokenteken wilt u wijzigen ? 
-    <input type="text" name="autokenteken"> <br/>
-    <input type="submit">
-</form>
+    <div class="container">
+    <form style="margin-top: 50px" action="update-auto2.php" method="post" class="form-inline">
+       <div class="form-group mx-sm-12 mb-10">
+         <label for="inputPassword2" class="sr-only">Autokenteken</label>
+         <input type="text" name="autokenteken" class="form-control" id="inputPassword2" placeholder="Plaats een autokenteken hier">
+       <button style="margin-top: 20px" class="btn btn-success" type="submit">Update</button>
+       </div>
+        </form>
+    </body>
+    </div>
 
     <!-- Bootstrap scripts -->
     <script src="./validation.js"></script>
