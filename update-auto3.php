@@ -25,7 +25,7 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-    
+
     <h1> Update auto 3  </h1>
 <p>autogegevens wijzigen in de tabel klant van de database garage </p>
 
@@ -42,17 +42,11 @@
 
     $sql = $conn->prepare(" update autogegevens set autokenteken  = :autokenteken, autotype = :autotype, automerk  = :automerk, autokmstand = :autokmstand where autokenteken = :autokenteken ") ;
 
-    $sql->execute 
-    ([ 
-        "autokenteken" => $autokenteken,
-        "autotype" => $autotype,
-        "automerk" => $automerk,
-        "autokmstand" => $autokmstand
-        ]) ;
+    $sql->execute([ "autokenteken" => $autokenteken, "autotype" => $autotype, "automerk" => $automerk, "autokmstand" => $autokmstand]) ;
 
     echo "De auto is gewijzigd . <br/>";
     echo "<a href='dbreadauto.php'> Terug naar het menu. </a>";
-        ?>
+    ?>
 
 
     <!-- Bootstrap scripts -->
