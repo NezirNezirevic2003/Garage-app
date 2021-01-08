@@ -25,12 +25,8 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-        <h1>Delete auto 1</h1>
-        <p>
-           Dit formulier zoekt een auto op uit
-           de tabel auto van database garage
-           om hem te kunnen verwijderen.
-        </p>
+
+    <!--Main-->
         <div class="container">
         <form action="delete-auto2.php" method="post">
         <div class="form-group mx-sm-3 mb-2">

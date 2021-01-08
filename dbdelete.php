@@ -26,14 +26,16 @@
         </div>
     </nav>
     <!-- Einde navigatie menu -->
-
-    <form action="dbdelete2.php" method="post" class="form-inline">
-       <div class="form-group mx-sm-3 mb-2">
+    <div class="container">
+    <form style="margin-top: 50px;" action="dbdelete2.php" method="post" class="form-inline">
+       <div class="form-group mx-sm-12 mb-10">
          <label for="inputPassword2" class="sr-only">Klant-id</label>
          <input type="text" name="klantidvak" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
+         <input style="margin-top: 20px" value="Verwijder" type="submit" class="btn btn-danger mb-2"></input>
        </div>
-       <input type="submit" class="btn btn-primary mb-2"></input>
     </form>
+    </div>
+    
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

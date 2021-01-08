@@ -15,10 +15,10 @@
         </button>
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
-                <a href="dbinsertAuto.php" class="nav-item nav-link">Create</a>
-                <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
-                <a href="update-auto1.php" class="nav-item nav-link">Update</a>
-                <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="dbinsert.php" class="nav-item nav-link">Create</a>
+                <a href="dbread.php" class="nav-item nav-link">Read</a>
+                <a href="dbupdate.php" class="nav-item nav-link">Update</a>
+                <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>

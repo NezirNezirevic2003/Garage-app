@@ -59,7 +59,7 @@ $conn = null;
     <!-- Einde Navigatie menu -->
 
     <!-- Verzend formulier -->
-    <div id="test12" class="container">
+    <div class="container">
     <form class="needs-validation" method="post" novalidate>
      <div class="form-row">
          <div style="margin-top: 50px" class="col-md-12 mb-4">
@@ -93,7 +93,7 @@ $conn = null;
          </div>
          </div>
      </div>
-     <button class="btn btn-primary" type="submit">Verzenden</button>
+     <button class="btn btn-success" type="submit">Verzenden</button>
      </form>
 
     </div>
