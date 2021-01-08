@@ -35,9 +35,21 @@
         $autos->execute(["autokenteken" => $autokenteken]);
         $waarde =  $autos->fetch();
         
+
         if($waarde){
-        $autos = $conn->prepare("SELECT autokenteken, automerk, autotype, autokmstand, klantid FROM autogegevens WHERE autokenteken :autokenteken");
-        $autos->execute(["autokenteken" => $autokenteken]);
+            $autos = $conn->prepare(" 
+                                     select autokenteken,
+                                      automerk,
+                                      autotype,
+                                      autokmstand,
+                                       klantid
+                                      from   autogegevens
+                                where   autokenteken = :autokenteken");
+            $autos->execute(["autokenteken" => $autokenteken]);
+        // if($waarde){
+
+        // $autos = $conn->prepare("select autokenteken, automerk, autotype, autokmstand, klantid from autogegevens where autokenteken :autokenteken");
+        // $autos->execute(["autokenteken" => $autokenteken]);
         
         echo "<form action ='update-auto3.php' method='post'>";
         foreach ($autos as $auto){
