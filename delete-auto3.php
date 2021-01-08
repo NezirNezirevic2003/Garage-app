@@ -53,7 +53,7 @@
                 echo "De gegevens zijn niet verwijderd. <br />";
             }
 
-            echo "<a href='../dbread-auto.php'> Terug naar het menu. </a>";
+            echo "<a href='./dbreadauto.php'> Terug naar het menu. </a>";
         ?>
 
 
