@@ -30,7 +30,7 @@
     <form style="margin-top: 50px" action="update-auto2.php" method="post" class="form-inline">
        <div class="form-group mx-sm-12 mb-10">
          <label for="inputPassword2" class="sr-only">Autokenteken</label>
-         <input type="text" name="autokenteken" class="form-control" id="inputPassword2" placeholder="Plaats een autokenteken hier">
+         <input type="text" name="autokenteken" class="form-control" id="autokenteken" placeholder="Plaats een autokenteken hier">
        <button style="margin-top: 20px" class="btn btn-success" type="submit">Update</button>
        </div>
         </form>
