@@ -55,7 +55,7 @@
             ]);
 
 			echo "De klant is gewijzigd. <br />";
-			echo "<a href='./klant.html'> terug naar het menu </a>";
+			echo "<a href='dbread.php'> terug naar het menu </a>";
 		?>
 		    <!-- Bootstrap scripts -->
 			<script src="./validation.js"></script>
