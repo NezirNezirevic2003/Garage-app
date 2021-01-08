@@ -30,7 +30,7 @@
     <form style="margin-top: 50px" action="dbupdate2.php" method="post" class="form-inline">
        <div class="form-group mx-sm-12 mb-10">
          <label for="inputPassword2" class="sr-only">Klant-id</label>
-         <input type="text" name="klantidvak" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
+         <input type="text" name="klantid" class="form-control" id="inputPassword2" placeholder="Plaats een klant-id hier">
        <button style="margin-top: 20px" class="btn btn-success" type="submit">Update</button>
        </div>
         </form>

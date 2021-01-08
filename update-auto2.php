@@ -26,55 +26,37 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-
-        <h1> Update auto 2 </h1>
-        <p>
-            <?php 
-
-            // $result = ("SELECT * FROM autogegevens WHERE autokenteken = 'autokenteken'");
-            // if ($result = null){
-            //     echo "wordt niet herkend";
-            // } else{
-            //     $autokenteken= $_POST["autokenteken"];
-            // }
-
-            $autokenteken= $_POST["autokenteken"];
-            
-            
-            
-            require_once "connection.php";
-
-            $autos = $conn->prepare(" 
-                                     select
-                                        autokenteken,
-                                        automerk,
-                                        autotype,
-                                        autokmstand,
-                                        klantid
-                                from  autogegevens
-                                where   autokenteken = :autokenteken");
-$autos->execute(["autokenteken" => $autokenteken]);
-
-echo "<form action ='update-auto3.php' method='post'>";
-     foreach ($autos as $auto )
-     {
-
-
+        <h1> garage update auto 2 </h1>
+    <?php 
+        require_once "connection.php";
+                
+        $autokenteken= $_POST["autokenteken"];
+        $autos = $conn->prepare(' SELECT autokenteken FROM autogegevens WHERE autokenteken = :autokenteken');
+        $autos->execute(["autokenteken" => $autokenteken]);
+        $waarde =  $autos->fetch();
+        
+        if($waarde)
+        { $autos = $conn->prepare(" SELECT autokenteken, automerk, autotype, autokmstand, klantid FROM  autogegevens WHERE autokenteken :autokenteken");
+        $autos->execute(["autokenteken" => $autokenteken]);
+        
+        echo "<form action ='update-auto3.php' method='post'>";
+        foreach ($autos as $auto)
+        {
          echo "autokenteken: <input type='text'" ;
          echo "name = 'autokenteken'";
          echo "value = '" .$auto["autokenteken"]. "' " ;
          echo "> </br>" ;
-
+ 
          echo " autotype : <input type='text' " ;
          echo "name = 'autotypevak'" ;
          echo "value = '" . $auto["autotype"]. "'" ;
          echo "> </br>" ;
-
+ 
          echo " automerk: <input type='text' " ;
          echo "name = 'automerkvak'" ;
          echo "value = '" . $auto["automerk"]. "'" ;
          echo "> </br>" ;
-
+ 
       
          echo " autokmstand : <input type='text' " ;
          echo "name = 'autokmstandvak'" ;
@@ -88,13 +70,11 @@ echo "<form action ='update-auto3.php' method='post'>";
         }
          echo "<input type='submit'>";
          echo "</form>";
-         ?>
-
-
-    <!-- Bootstrap scripts -->
-    <script src="./validation.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    </body>
+        }
+        else{    
+        echo "<script type='text/javascript'>alert('Foutmelding...');</script>";
+        echo "Foutmelding: er is geen waarde gevonden..";
+        }
+    ?>
+</body>
 </html>
