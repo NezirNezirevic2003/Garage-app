@@ -43,14 +43,14 @@ echo "<tabel>";
                 foreach($klanten as $klant)
                 {
                     echo "<tr>";
-                    echo "<div style='margin-top: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'> Klantid: " . $klant["klantid"] . "<br/>";
+                    echo "<div style='margin-top: 20px; margin-bottom: -30px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Klantid: " . $klant["klantid"] . "<br/>";
                     echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
                     echo "<td>"."Klantadres: " . $klant["klantadres"] . "</td>"."<br/>";
                     echo "<td>"."Klantpostcode: " . $klant["klantpostcode"] . "</td>"."<br/>";
                     echo "<td>"."Klantplaats: " . $klant["klantplaats"] . "</td>"."<br/>"."<br/>";
                     echo "</br></div>";
-                    echo "<div class='container'><button style='margin-top: -80px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdate.php?id=[klantid]'>Bewerken</a></button>";
-                    echo "<button style='margin-left: 10px; margin-top: -80px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdelete.php?id=[klantid]'>Verwijderen</a></button></div>";
+                    echo "<div class='container'><button style='margin-top: -30px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdate.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -30px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdelete.php?id=[klantid]'>Verwijderen</a></button></div>";
                     echo "</br>";
                 }
             echo "</tabel>";
