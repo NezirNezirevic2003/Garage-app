@@ -25,11 +25,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-
-        <p>
-            Dit zijn alle gegevens uit de 
-            tabel auto van de database garage.
-        </p>
         <?php
             // Database toevoegen.
             require_once "connection.php";
@@ -43,14 +38,14 @@
                 foreach($autos as $auto)
                 {
                     echo "<tr>";
-                    echo "<td>"."Autokenteken: " . $auto["autokenteken"] . "</td>"."<br/>";
+                    echo "<div style='margin-top: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Autokenteken: " . $auto["autokenteken"] ."<br/>";
                     echo "<td>"."Automerk: " . $auto["autotype"] . "</td>"."<br/>";
                     echo "<td>"."Automerk: " . $auto["automerk"] . "</td>"."<br/>";
                     echo "<td>"."Autokmstand: " . $auto["autokmstand"] . "</td>"."<br/>";
                     echo "<td>"."Klantid: " . $auto["klantid"] . "</td>"."<br/>"."<br/>";
-                    echo "</br>";
-                    echo "<button style='margin-top: -90px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
-                    echo "<button style='margin-left: 10px; margin-top: -90px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button>";
+                    echo "</br></div";
+                    echo "<div class='container'><button style='margin-top: -50px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -50px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button></div>";
                     echo "</br>";
                 }
             echo "</tabel>";

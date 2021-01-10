@@ -28,11 +28,11 @@
 
     <!--Main-->
         <div class="container">
-        <form action="delete-auto2.php" method="post">
-        <div class="form-group mx-sm-3 mb-2">
+        <form style="margin-top: 50px" action="delete-auto2.php" method="post">
+        <div class="form-group mx-sm-12 mb-10">
             <label for="inputPassword2" class="sr-only">Autokenteken</label>
             <input name="autokentekenvak" type="text"  class="form-control" id="inputPassword2" placeholder="Plaats Autokenteken hier" value="">
-            <input type="submit" class="btn btn-danger mb-2">
+            <input style="margin-top: 20px" type="submit" class="btn btn-danger mb-2">
         </div>
         </form>
         </div>

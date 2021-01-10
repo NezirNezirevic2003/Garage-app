@@ -43,16 +43,15 @@ echo "<tabel>";
                 foreach($klanten as $klant)
                 {
                     echo "<tr>";
-                    echo "<td>"."Klantid: " . $klant["klantid"] . "</td>"."<br/>";
+                    echo "<div style='margin-top: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'> Klantid: " . $klant["klantid"] . "<br/>";
                     echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
                     echo "<td>"."Klantadres: " . $klant["klantadres"] . "</td>"."<br/>";
                     echo "<td>"."Klantpostcode: " . $klant["klantpostcode"] . "</td>"."<br/>";
                     echo "<td>"."Klantplaats: " . $klant["klantplaats"] . "</td>"."<br/>"."<br/>";
-                    echo "</br>";
-                    echo "<button style='margin-top: -90px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdate.php?id=[klantid]'>Bewerken</a></button>";
-                    echo "<button style='margin-left: 10px; margin-top: -90px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdelete.php?id=[klantid]'>Verwijderen</a></button>";
+                    echo "</br></div>";
+                    echo "<div class='container'><button style='margin-top: -80px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdate.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -80px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdelete.php?id=[klantid]'>Verwijderen</a></button></div>";
                     echo "</br>";
                 }
             echo "</tabel>";
-            echo "<button style='margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button>"; 
-?>
+            echo "<div class='container'><style'margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></style></div>"; 
