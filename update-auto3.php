@@ -25,39 +25,33 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
+    
     <h1> Update auto 3  </h1>
-<p>autogegevens wijzigen in de tabel 
-    klant van de database garage 
-</p>
+<p>autogegevens wijzigen in de tabel klant van de database garage </p>
+
 <?php 
-            //autogegevens uit het formulier halen.
+    //autogegevens uit het formulier halen.
 
-            $autokenteken= $_POST["autokenteken"];
-            $autotype= $_POST["autotypevak"];
-            $automerk= $_POST["automerkvak"];
-            $autokmstand= $_POST["autokmstandvak"];
+    $autokenteken= $_POST["autokenteken"];
+    $autotype= $_POST["autotype"];
+    $automerk= $_POST["automerk"];
+    $autokmstand= $_POST["autokmstand"];
 
-        // connect met database
-        require_once "connection.php";
+     // connect met database
+    require_once "connection.php";
 
-        $sql = $conn->prepare
-        ("  
-        update autogegevens set      autokenteken  = :autokenteken,
-                             autotype  = :autotype,
-                             automerk  = :automerk, 
-                             autokmstand = :autokmstand
-                             where autokenteken = :autokenteken") ;
+    $sql = $conn->prepare(" update autogegevens set autokenteken  = :autokenteken, autotype = :autotype, automerk  = :automerk, autokmstand = :autokmstand where autokenteken = :autokenteken ") ;
 
-        $sql->execute 
-        ([ 
-            "autokenteken" => $autokenteken,
-            "autotype" => $autotype,
-            "automerk" => $automerk,
-           "autokmstand" => $autokmstand
+    $sql->execute 
+    ([ 
+        "autokenteken" => $autokenteken,
+        "autotype" => $autotype,
+        "automerk" => $automerk,
+        "autokmstand" => $autokmstand
         ]) ;
 
-        echo "De auto is gewijzigd . <br/>";
-        echo "<a href='dbreadauto.php'> Trug naar het menu. </a>";
+    echo "De auto is gewijzigd . <br/>";
+    echo "<a href='dbreadauto.php'> Terug naar het menu. </a>";
         ?>
 
 

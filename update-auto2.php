@@ -33,39 +33,41 @@
         $autokenteken= $_POST["autokenteken"];
         $autos = $conn->prepare(' SELECT autokenteken FROM autogegevens WHERE autokenteken = :autokenteken');
         $autos->execute(["autokenteken" => $autokenteken]);
+
         $waarde =  $autos->fetch();
-        
-        if($waarde)
-        { $autos = $conn->prepare(" SELECT autokenteken, automerk, autotype, autokmstand, klantid FROM  autogegevens WHERE autokenteken :autokenteken");
-        $autos->execute(["autokenteken" => $autokenteken]);
-        
+
+        if($waarde){   
+            $autos = $conn->prepare("SELECT autokenteken, automerk, autotype, autokmstand, klantid FROM autogegevens WHERE  autokenteken = :autokenteken");
+            $autos->execute(["autokenteken" => $autokenteken]);
+
         echo "<form action ='update-auto3.php' method='post'>";
-        foreach ($autos as $auto)
-        {
+        foreach ($autos as $auto){
+        
+
          echo "autokenteken: <input type='text'" ;
          echo "name = 'autokenteken'";
          echo "value = '" .$auto["autokenteken"]. "' " ;
          echo "> </br>" ;
  
          echo " autotype : <input type='text' " ;
-         echo "name = 'autotypevak'" ;
+         echo "name = 'autotype'" ;
          echo "value = '" . $auto["autotype"]. "'" ;
          echo "> </br>" ;
  
          echo " automerk: <input type='text' " ;
-         echo "name = 'automerkvak'" ;
+         echo "name = 'automerk'" ;
          echo "value = '" . $auto["automerk"]. "'" ;
          echo "> </br>" ;
  
       
          echo " autokmstand : <input type='text' " ;
-         echo "name = 'autokmstandvak'" ;
+         echo "name = 'autokmstand'" ;
          echo "value = '" . $auto["autokmstand"]. "'" ;
          echo "> </br>" ;
      
      
          echo " klantid :". $auto["klantid"];
-         echo " <input type='hidden' name='klantidvak' " ;
+         echo " <input type='hidden' name='klantid' " ;
          echo "value = ' " . $auto["klantid"]."'> <br/> " ;
         }
          echo "<input type='submit'>";
