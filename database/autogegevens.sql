@@ -15,3 +15,5 @@ INSERT INTO `autogegevens` (`autokenteken`, `automerk`, `autotype`, `autokmstand
 ('HV-GB-23', 'Jaguar', 'XJ6', '2043439', 1);
 COMMIT;
 
+-- Plakt de volgende line code in autogegevens en dan in sql zodat we een foreign key linken met onze klantgegevens
+-- ALTER TABLE garage.autogegevens ADD INDEX fk_klantgegevens_autogegevens (klantid) USING BTREE;
