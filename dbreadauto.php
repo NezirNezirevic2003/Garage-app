@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto | Read</title>
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./public/style.scss">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
@@ -25,11 +25,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-
-        <p>
-            Dit zijn alle gegevens uit de 
-            tabel auto van de database garage.
-        </p>
         <?php
             // Database toevoegen.
             require_once "connection.php";
@@ -43,18 +38,18 @@
                 foreach($autos as $auto)
                 {
                     echo "<tr>";
-                    echo "<td>"."Autokenteken: " . $auto["autokenteken"] . "</td>"."<br/>";
+                    echo "<div style='margin-top: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Autokenteken: " . $auto["autokenteken"] ."<br/>";
                     echo "<td>"."Automerk: " . $auto["autotype"] . "</td>"."<br/>";
                     echo "<td>"."Automerk: " . $auto["automerk"] . "</td>"."<br/>";
                     echo "<td>"."Autokmstand: " . $auto["autokmstand"] . "</td>"."<br/>";
                     echo "<td>"."Klantid: " . $auto["klantid"] . "</td>"."<br/>"."<br/>";
-                    echo "</br>";
-                    echo "<button style='margin-top: -90px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
-                    echo "<button style='margin-left: 10px; margin-top: -90px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button>";
+                    echo "</br></div";
+                    echo "<div class='container'><button style='margin-top: -50px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='update-auto1.php?id=[klantid]'>Bewerken</a></button>";
+                    echo "<button style='margin-left: 10px; margin-top: -50px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='delete-auto1.php?id=[klantid]'>Verwijderen</a></button></div>";
                     echo "</br>";
                 }
             echo "</tabel>";
-            echo "<button style='margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button>";
+            echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></button></div>";
         ?>
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

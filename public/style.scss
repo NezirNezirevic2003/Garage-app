@@ -1,64 +1,62 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .navbar-brand {
-  margin-left: 60px;
+	margin-left: 60px;
 }
-
-.navbar-nav a {
-  padding: 0 5px;
+.navbar-nav {
+	a {
+		padding: 0 5px;
+	}
 }
-
 header {
-  position: relative;
-  background-color: black;
-  height: 91.5vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	background-color: black;
+	height: 91.5vh;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+	video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: black;
+		opacity: 0.5;
+		z-index: 1;
+	}
 }
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
 @media (pointer: coarse) and (hover: none) {
-  header {
-    background: url("../assets/videos/backgroundvideo.mp4") black no-repeat center center scroll;
-  }
-  header video {
-    display: none;
-  }
+	header {
+		background: url("../assets/videos/backgroundvideo.mp4") black no-repeat center center scroll;
+		video {
+			display: none;
+		}
+	}
 }
+
 
 :root {
   --input-padding-x: 1.5rem;
@@ -92,14 +90,14 @@ header .overlay {
   margin-bottom: 1rem;
 }
 
-.form-label-group > input,
-.form-label-group > label {
+.form-label-group>input,
+.form-label-group>label {
   padding: var(--input-padding-y) var(--input-padding-x);
   height: auto;
   border-radius: 2rem;
 }
 
-.form-label-group > label {
+.form-label-group>label {
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +109,6 @@ header .overlay {
   cursor: text;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 
@@ -127,6 +124,10 @@ header .overlay {
   color: transparent;
 }
 
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
 .form-label-group input::placeholder {
   color: transparent;
 }
@@ -136,7 +137,7 @@ header .overlay {
   padding-bottom: calc(var(--input-padding-y) / 3);
 }
 
-.form-label-group input:not(:placeholder-shown) ~ label {
+.form-label-group input:not(:placeholder-shown)~label {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
@@ -144,18 +145,21 @@ header .overlay {
 }
 
 @supports (-ms-ime-align: auto) {
-  .form-label-group > label {
+  .form-label-group>label {
     display: none;
   }
+
   .form-label-group input::-ms-input-placeholder {
     color: #777;
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .form-label-group > label {
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
     display: none;
   }
+
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
