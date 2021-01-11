@@ -54,8 +54,8 @@
 				"klantplaats"	=> $klantplaats
             ]);
 
-			echo "De klant is gewijzigd. <br />";
-			echo "<a href='dbread.php'> terug naar het menu </a>";
+			echo"<div style='text-align: center;' class='alert alert-success' role='alert'><p style='margin-bottom: 5px;'>Klantgegevens zijn succesvol gewijzigd</p></div>";
+    echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbreadauto'>Terug naar menu</a></button></div>";
 		?>
 		    <!-- Bootstrap scripts -->
 			<script src="./validation.js"></script>

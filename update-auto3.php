@@ -25,10 +25,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-
-    <h1> Update auto 3  </h1>
-<p>autogegevens wijzigen in de tabel klant van de database garage </p>
-
 <?php 
     //autogegevens uit het formulier halen.
 
@@ -44,9 +40,9 @@
 
     $sql->execute([ "autokenteken" => $autokenteken, "autotype" => $autotype, "automerk" => $automerk, "autokmstand" => $autokmstand]) ;
 
-    echo "De auto is gewijzigd . <br/>";
-    echo "<a href='dbreadauto.php'> Terug naar het menu. </a>";
-    ?>
+    echo"<div style='text-align: center;' class='alert alert-success' role='alert'><p style='margin-bottom: 5px;'>Autogegevens zijn succesvol gewijzigd</p></div>";
+    echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbreadauto'>Terug naar menu</a></button></div>";
+?>
 
 
     <!-- Bootstrap scripts -->

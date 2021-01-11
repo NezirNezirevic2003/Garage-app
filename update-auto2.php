@@ -26,7 +26,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-        <h1> garage update auto 2 </h1>
     <?php 
         require_once "connection.php";
                 
@@ -40,42 +39,37 @@
             $autos = $conn->prepare("SELECT autokenteken, automerk, autotype, autokmstand, klantid FROM autogegevens WHERE  autokenteken = :autokenteken");
             $autos->execute(["autokenteken" => $autokenteken]);
 
-        echo "<form action ='update-auto3.php' method='post'>";
+        echo "<form style='margin-top: 50px;' action ='update-auto3.php' method='post'>";
         foreach ($autos as $auto){
         
 
-         echo "autokenteken: <input type='text'" ;
+         echo "<div class='container'><label for='validationCustom01'>Autokenteken</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'" ;
          echo "name = 'autokenteken'";
          echo "value = '" .$auto["autokenteken"]. "' " ;
-         echo "> </br>" ;
+         echo "></div> </br>" ;
  
-         echo " autotype : <input type='text' " ;
+         echo "<div class='container'><label for='validationCustom01'>Autotype</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' " ;
          echo "name = 'autotype'" ;
          echo "value = '" . $auto["autotype"]. "'" ;
-         echo "> </br>" ;
+         echo "></div> </br>" ;
  
-         echo " automerk: <input type='text' " ;
+         echo "<div class='container'><label for='validationCustom01'>Automerk</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' " ;
          echo "name = 'automerk'" ;
          echo "value = '" . $auto["automerk"]. "'" ;
-         echo "> </br>" ;
+         echo "></div> </br>" ;
  
       
-         echo " autokmstand : <input type='text' " ;
+         echo " <div class='container'><label for='validationCustom01'>Autokmstand</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' " ;
          echo "name = 'autokmstand'" ;
          echo "value = '" . $auto["autokmstand"]. "'" ;
-         echo "> </br>" ;
+         echo "></div> </br>" ;
      
-     
-         echo " klantid :". $auto["klantid"];
-         echo " <input type='hidden' name='klantid' " ;
-         echo "value = ' " . $auto["klantid"]."'> <br/> " ;
         }
-         echo "<input type='submit'>";
+         echo "<div class='container'><button class='btn btn-success'><a style='color: white; text-decoration: none;' type='submit'>Update</a></button></div>";
          echo "</form>";
         }
         else{    
-        echo "<script type='text/javascript'>alert('Foutmelding...');</script>";
-        echo "Foutmelding: er is geen waarde gevonden..";
+            echo"<div style='text-align: center;' class='alert alert-danger' role='alert'><p style='margin-bottom: 5px;'>Er is een fout opgetreden: Geen kenteken gevonden</p></div>";
         }
     ?>
 </body>
