@@ -1,3 +1,6 @@
+<?php
+require 'connection.php';
+?>
 <!doctype html>
 <html lang="nl">
     <head>
@@ -11,7 +14,7 @@
         <?php
             // gegevens uit het formulier halen
             $klantid = $_POST["klantidvak"];
-            $klanten = $conn->prepare(' SELECT klantid FROM autogegevens WHERE klantid = :klantid');
+            $klanten = $conn->prepare('SELECT klantid FROM autogegevens WHERE klantid = :klantid');
             $klanten->execute(["klantid" => $klantid]);
             // alle data pakken.
             $waarde = $klanten->fetchAll();
