@@ -4,7 +4,7 @@
         <meta name="author" content="Anjo Eijeriks">
         <meta chatset="UTF-8">
         <title>Klant | Delete</title>  
-        <link rel="stylesheet" href="./public/style.css">
+        <link rel="stylesheet" href="./public/style.scss">
     </head>
     <body>
         <h1>garage delete klant 3</h1>

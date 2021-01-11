@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto | Delete</title>
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./public/style.scss">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+
     <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="./public/auto.html">Garage</a>
@@ -32,14 +33,13 @@
         <div class="form-group mx-sm-12 mb-10">
             <label for="inputPassword2" class="sr-only">Autokenteken</label>
             <input name="autokentekenvak" type="text"  class="form-control" id="inputPassword2" placeholder="Plaats Autokenteken hier" value="">
-            <input style="margin-top: 20px" type="submit" class="btn btn-danger mb-2">
+            <input value="Verwijderen" style="margin-top: 20px" type="submit" class="btn btn-danger mb-2">
         </div>
         </form>
         </div>
         
-
-
     <!-- Bootstrap scripts -->
+
     <script src="./validation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

@@ -1,68 +1,62 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}  
-
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .navbar-brand {
-  margin-left: 60px;
+	margin-left: 60px;
 }
-
-.navbar-nav a {
-  padding: 0 5px;
+.navbar-nav {
+	a {
+		padding: 0 5px;
+	}
 }
-
 header {
-  position: relative;
-  background-color: black;
-  height: 91.5vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	background-color: black;
+	height: 91.5vh;
+	min-height: 25rem;
+	width: 100%;
+	overflow: hidden;
+	video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: black;
+		opacity: 0.5;
+		z-index: 1;
+	}
 }
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-
-
 @media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('../assets/videos/backgroundvideo.mp4') black no-repeat center center scroll;
+	header {
+		background: url("../assets/videos/backgroundvideo.mp4") black no-repeat center center scroll;
+		video {
+			display: none;
+		}
+	}
 }
-  header video {
-    display: none;
-  }
-}
+
 
 :root {
   --input-padding-x: 1.5rem;
@@ -75,7 +69,7 @@ header .overlay {
 }
 
 .bg-image {
-  background-image: url('../assets/car-mechanic.jpg');
+  background-image: url("../assets/car-mechanic.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -114,8 +108,8 @@ header .overlay {
   color: #495057;
   cursor: text;
   border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -154,6 +148,7 @@ header .overlay {
   .form-label-group>label {
     display: none;
   }
+
   .form-label-group input::-ms-input-placeholder {
     color: #777;
   }
@@ -164,9 +159,8 @@ header .overlay {
   .form-label-group>label {
     display: none;
   }
+
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
 }
-
-
