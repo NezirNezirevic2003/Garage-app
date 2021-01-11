@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="./public/style.scss">
     </head>
     <body>
-        <h1>garage delete klant 3</h1>
         <?php
             // gegevens uit het formulier halen
             $klantid = $_POST["klantidvak"];
@@ -20,11 +19,11 @@
             if(!$waarde) {
                 $klanten = $conn->prepare('DELETE FROM klantgegevens WHERE klantid = :klantid');
                 $klanten->execute(["klantid" => $klantid]);
-                echo "Klant is verwijderd.";
+                echo"<div style='text-align: center;' class='alert alert-success' role='alert'><p style='margin-bottom: 5px;'>Klant is succesvol verwijderd</p></div>";
             } else {
-                echo "Kan niet verwijder worden omdat u een auto heeft.";
+                echo"<div style='text-align: center;' class='alert alert-danger' role='alert'><p style='margin-bottom: 5px;'>Klant kon niet verwijderd worden</p></div>";
             }
-            echo "<a href='dbread.php'> Terug naar het menu. </a>";
+            echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbread.php'>Terug naar menu</a></button></div>";
         ?>
     </body>
 </html>

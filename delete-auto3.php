@@ -25,12 +25,6 @@
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
-        <h1>Delete auto 3</h1>
-        <p>
-           Op autokenteken gegevens zoeken uit de 
-           tabel auto van de database garage 
-           zodat ze verwijderd kunnen worden.
-        </p>
         <?php
             // gegevens uit het formulier halen
             $autokenteken = $_POST["autokenteken"];
@@ -46,14 +40,14 @@
                                         where autokenteken = :autokenteken");
                 $sql->execute(["autokenteken" => $autokenteken]);
 
-                echo "De gegevens zijn verwijderd. <br />";
+                echo"<div style='text-align: center;' class='alert alert-success' role='alert'><p style='margin-bottom: 5px;'>Auto is succevol verwijderd</p></div>";
             }
             else
             {
-                echo "De gegevens zijn niet verwijderd. <br />";
+                echo"<div style='text-align: center;' class='alert alert-danger' role='alert'><p style='margin-bottom: 5px;'>Auto kon niet verwijderd worden</p></div>";
             }
 
-            echo "<a href='./dbreadauto.php'> Terug naar het menu. </a>";
+            echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbreadauto.php'>Terug naar menu</a></button></div>";
         ?>
 
 
