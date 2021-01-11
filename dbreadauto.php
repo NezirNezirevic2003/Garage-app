@@ -39,7 +39,7 @@
                 {
                     echo "<tr>";
                     echo "<div style='margin-top: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Autokenteken: " . $auto["autokenteken"] ."<br/>";
-                    echo "<td>"."Automerk: " . $auto["autotype"] . "</td>"."<br/>";
+                    echo "<td>"."Autotype: " . $auto["autotype"] . "</td>"."<br/>";
                     echo "<td>"."Automerk: " . $auto["automerk"] . "</td>"."<br/>";
                     echo "<td>"."Autokmstand: " . $auto["autokmstand"] . "</td>"."<br/>";
                     echo "<td>"."Klantid: " . $auto["klantid"] . "</td>"."<br/>"."<br/>";
