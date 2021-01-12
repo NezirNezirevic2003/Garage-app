@@ -22,6 +22,7 @@
                 <a href="dbread.php" class="nav-item nav-link">Read</a>
                 <a href="dbupdate.php" class="nav-item nav-link">Update</a>
                 <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
+                <a href="dbsearch.php" class="nav-item nav-link">Search</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
@@ -55,3 +56,4 @@ echo "<tabel>";
                 }
             echo "</tabel>";
             echo "<div class='container'><style'margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='public/auto.html'>Terug naar menu</a></style></div>"; 
+?>
