@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./public/style.scss">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body>
 
+<body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="./public/klant.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">

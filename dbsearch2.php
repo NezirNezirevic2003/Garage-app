@@ -25,7 +25,6 @@
         </div>
     </nav>
     <?php
-
             $klantid = $_POST["klantidvak"];
 
             require_once "connection.php";

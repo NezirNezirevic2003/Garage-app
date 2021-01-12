@@ -35,7 +35,7 @@
         ");
 
             $klanten->execute();
-    echo "<tabel>";
+        echo "<tabel>";
             foreach($klanten as $klant)
         {
         echo "<tr>";

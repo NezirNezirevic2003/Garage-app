@@ -21,6 +21,7 @@
                 <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
                 <a href="update-auto1.php" class="nav-item nav-link">Update</a>
                 <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="dbsearchauto.php" class="nav-item nav-link">Search</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
