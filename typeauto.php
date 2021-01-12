@@ -30,47 +30,28 @@
 </body>
 </html>
 
-
 <?php
-require_once 'connection.php';
+        require_once "connection.php";
+ 
+        $klanten= $conn->prepare("SELECT klantnaam,
+                                a.autotype
+                              FROM   klantgegevens
+                              INNER JOIN autogegevens a on klantgegevens.klantid = a.klantid
+        ");
 
-$sql = "
-    SELECT
-        k.voornaam,
-        k.adres,
-        k.zipcode,
-        a.plaats
-    FROM
-        klantgegevens AS k
-    INNER JOIN
-        autogegevens AS a
-            ON k.id = a.functie_id
-";
-
-if(!$autogegevens = $Conn->query($sqlselect))
-{
-    trigger_error(mysql_error().'<br />In query: '.$sqlselect);
-}
-elseif(mysql_num_rows($res) == 0)
-{
-    echo 'Geen records gevonden.';
-}
-else
-{
-    while($row = mysql_fetch_assoc($res))
-    {
-        if(empty($row['tussenvoegsel']))
+            $klanten->execute();
+        echo "<tabel>";
+            foreach($klanten as $klant)
         {
-            echo $row['voornaam'].' '.$row['achternaam'].' ('.$row['autotype'].') <br />';
+        echo "<tr>";
+        echo "<td>" . $klant["klantnaam"] ."</td>"."<br/>"."<br/>";
+        echo "<td>" . $klant["autotype"] . "</td>"."<br/>"."<br/>";
+        echo "<tr>";
         }
-        else
-        {
-            echo $row['voornaam'].' '.$row['tussenvoegsel'].' '.$row['achternaam'].' ('.$row['autotype'].') <br />';
-        }
-    }
-}
-?>
 
+    echo "</tabel>";
+        echo "<a href='gar-menu.php'> terug naar het menu </a>";
+    ?>
 
 
 
