@@ -19,6 +19,7 @@
                 <a href="dbread.php" class="nav-item nav-link">Read</a>
                 <a href="dbupdate.php" class="nav-item nav-link">Update</a>
                 <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
+                <a href="dbsearch.php" class="nav-item nav-link">Search</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
