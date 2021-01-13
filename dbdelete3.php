@@ -25,20 +25,22 @@ require 'connection.php';
                 <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
                 <a href="update-auto1.php" class="nav-item nav-link">Update</a>
                 <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="dbklantauto.php" class="nav-item nav-link">Auto Lijst</a>
+                <a href="typeauto.php" class="nav-item nav-link">Autotype Lijst</a>
                 <a href="login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </nav>
     <!-- Einde Navigatie menu -->
         <?php
-            // gegevens uit het formulier halen
+            ## Gegevens uit het formulier halen
             $klantid = $_POST["klantidvak"];
             $klanten = $conn->prepare('SELECT klantid FROM autogegevens WHERE klantid = :klantid');
             $klanten->execute(["klantid" => $klantid]);
-            // alle data pakken.
+            ## Alle gegeven worden eruit gehaald
             $waarde = $klanten->fetchAll();
 
-            //checken of klant id bestaat in de tabel autogegevens. Als het niet bestaat verwijder het als het wel bestaat verwijderen we het niet.
+            ## Checken of klant id bestaat in de tabel autogegevens. Als het niet bestaat verwijder het als het wel bestaat verwijderen we het niet.
             if(!$waarde) {
                 $klanten = $conn->prepare('DELETE FROM klantgegevens WHERE klantid = :klantid');
                 $klanten->execute(["klantid" => $klantid]);

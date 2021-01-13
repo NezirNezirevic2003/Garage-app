@@ -22,14 +22,19 @@
               <a href="dbupdate.php" class="nav-item nav-link">Update</a>
               <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
               <a href="dbsearch.php" class="nav-item nav-link">Search</a>
+              <a href="dbklantauto.php" class="nav-item nav-link">Auto Lijst</a>
+              <a href="typeauto.php" class="nav-item nav-link">Autotype Lijst</a>
               <a href="public/login.html" class="nav-item nav-link">Login</a>
-              <a href="typeauto.php" class="nav-item nav-link">Typeauto</a>
             </div>
         </div>
     </nav>
     <!-- Einde navigatie menu -->
 
+<<<<<<< HEAD
     <!--klant id ophalen-->
+=======
+    <!-- Klant id wordt hier opgezocht in het database -->
+>>>>>>> bc42e911608598b5dd99441b8729fe240f70e9c5
     <div class="container">
     <form style="margin-top: 50px;" action="dbdelete2.php" method="post" class="form-inline">
        <div class="form-group mx-sm-12 mb-10">
@@ -39,8 +44,8 @@
        </div>
     </form>
     </div>
+    <!-- Einde klant id zoekbalks -->
     
-
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

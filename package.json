@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/NezirNezirevic2003/Garage-app#readme",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "nodemon": "^2.0.6"
   }
 }

@@ -16,10 +16,13 @@
         </button>
         <div class="collapse navbar-collapse" id="expandme" >
             <div class="navbar-nav test">
-                <a href="dbinsert.php" class="nav-item nav-link">Create</a>
-                <a href="dbread.php" class="nav-item nav-link">Read</a>
-                <a href="dbupdate.php" class="nav-item nav-link">Update</a>
-                <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
+            <a href="dbinsertAuto.php" class="nav-item nav-link">Create</a>
+                <a href="dbreadauto.php" class="nav-item nav-link">Read</a>
+                <a href="update-auto1.php" class="nav-item nav-link">Update</a>
+                <a href="delete-auto1.php" class="nav-item nav-link">Delete</a>
+                <a href="dbsearchauto.php" class="nav-item nav-link">Search</a>
+                <a href="dbklantauto.php" class="nav-item nav-link">Auto Lijst</a>
+                <a href="typeauto.php" class="nav-item nav-link">Autotype Lijst</a>
                 <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
@@ -47,14 +50,15 @@
         echo "<tabel>";
             foreach($klanten as $klant)
         {
-        echo "<tr>";
-        echo "<td>" . $klant["klantnaam"] ."</td>"."<br/>"."<br/>";
-        echo "<td>" . $klant["autotype"] . "</td>"."<br/>"."<br/>";
-        echo "<tr>";
+            echo "<tr>";
+            echo "<div style='margin-top: 20px; margin-bottom: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'><br/>";
+            echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
+            echo "<td>"."Autotype: " . $klant["autotype"] . "</td>"."<br/>";
+            echo "</br></div>";
         }
 
     echo "</tabel>";
-        echo "<a href='gar-menu.php'> terug naar het menu </a>";
+            echo "<div class='container'><style'margin-top: 80px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbread.php'>Terug naar menu</a></style></div>";
     ?>
 
 

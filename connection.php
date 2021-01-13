@@ -1,5 +1,5 @@
 <?php
-
+##Connectie maken met de database
 $servername = "localhost";
 $username = "root";
 $password = "";
