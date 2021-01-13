@@ -20,6 +20,8 @@
               <a href="dbupdate.php" class="nav-item nav-link">Update</a>
               <a href="dbdelete.php" class="nav-item nav-link">Delete</a>
               <a href="dbsearch.php" class="nav-item nav-link">Search</a>
+              <a href="dbklantauto.php" class="nav-item nav-link">Auto Lijst</a>
+              <a href="typeauto.php" class="nav-item nav-link">Autotype Lijst</a>
               <a href="public/login.html" class="nav-item nav-link">Login</a>
             </div>
         </div>
