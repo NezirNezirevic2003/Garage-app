@@ -10,7 +10,7 @@ try {
     $stmt->bindParam(':klantpostcode', $klantpostcode);
     $stmt->bindParam(':klantplaats', $klantplaats);
 
-    ### Hier gebeurt er actie alleen als voornaam is ingevuld
+    ## Hier gebeurt er actie alleen als voornaam is ingevuld
     if (isset($_REQUEST['klantnaam']))
  {
     $klantnaam = $_POST['klantnaam'];
@@ -22,7 +22,7 @@ try {
     
 header('Location: dbread.php');
     }}
-    ### Als er een fout is krijg je een error op het scherm
+    ## Als er een fout is krijg je een error op het scherm
 catch(PDOException $e)
     {
     echo "Error: " . $e->getMessage();
@@ -99,7 +99,6 @@ $conn = null;
      <button class="btn btn-success" type="submit">Verzenden</button>
      </form>
      </div>
-    
     <!-- Einde Verzend formulier -->
 
     <!-- Bootstrap scripts -->

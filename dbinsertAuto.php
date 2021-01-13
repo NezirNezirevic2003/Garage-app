@@ -108,7 +108,6 @@ $conn = null;
      <button class="btn btn-primary" type="submit">Verzenden</button>
      </form>
     </div>
-     
     <!-- Einde Verzend formulier -->
 
     <!-- Bootstrap scripts -->

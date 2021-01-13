@@ -33,14 +33,14 @@ require 'connection.php';
     </nav>
     <!-- Einde Navigatie menu -->
         <?php
-            // gegevens uit het formulier halen
+            ## Gegevens uit het formulier halen
             $klantid = $_POST["klantidvak"];
             $klanten = $conn->prepare('SELECT klantid FROM autogegevens WHERE klantid = :klantid');
             $klanten->execute(["klantid" => $klantid]);
-            // alle data pakken.
+            ## Alle gegeven worden eruit gehaald
             $waarde = $klanten->fetchAll();
 
-            //checken of klant id bestaat in de tabel autogegevens. Als het niet bestaat verwijder het als het wel bestaat verwijderen we het niet.
+            ## Checken of klant id bestaat in de tabel autogegevens. Als het niet bestaat verwijder het als het wel bestaat verwijderen we het niet.
             if(!$waarde) {
                 $klanten = $conn->prepare('DELETE FROM klantgegevens WHERE klantid = :klantid');
                 $klanten->execute(["klantid" => $klantid]);

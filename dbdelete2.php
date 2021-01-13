@@ -29,10 +29,11 @@
     </nav>
     <!-- Einde navigatie menu -->
         <?php
-            // klantid uit het formulier halen --------------
+
+            ## Klantid uit het formulier halen
             $klantid = $_POST["klantidvak"];
  
-            // klantgegevens uit de tabel halen -------------
+            ## Klantgegevens uit de tabel halen 
             require_once "connection.php";
  
             $klanten = $conn->prepare("
@@ -45,7 +46,7 @@
                                         where  klantid = :klantid");
             $klanten->execute(["klantid" => $klantid]);
  
-            // klantgegevens laten zien -----------
+            ## Klanten laten zien uit de tabel klantengegevens voordat ze verwijderd worden
             echo "<tabel>";
                 foreach($klanten as $klant)
                 {
@@ -59,7 +60,7 @@
                     echo "</br>";
                 }
             echo "</tabel>";
- 
+            ## Hier druk je op verwijderen waardoor de informatie gepost wordt in dbdelete3
             echo "<form action='dbdelete3.php' method='post'>";
  
                 echo "<input type='hidden' name='klantidvak' value=$klantid>";

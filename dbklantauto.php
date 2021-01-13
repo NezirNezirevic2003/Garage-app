@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Navigatie menu -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a class="navbar-brand" href="./public/klant.html">Garage</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
@@ -26,17 +27,20 @@
             </div>
         </div>
     </nav>
+    <!-- Einde Navigatie menu -->
 	<?php
         require_once "connection.php";
- 
+        
+        ## Klantgegevens en autogegevens worden voorbereid en daarna worden alleen maar bepaalde dingen eruitgehaald
         $klanten= $conn->prepare("SELECT klantnaam,
                               a.automerk , a.autotype
                               FROM   klantgegevens
                               INNER JOIN autogegevens a on klantgegevens.klantid = a.klantid
         ");
-
+        ## Taak wordt uitgevoerd
             $klanten->execute();
         echo "<tabel>";
+        ## Alle data wordt hier gepost die we uit 2 databases hebben gehaald
             foreach($klanten as $klant)
         {
             echo "<tr>";
