@@ -48,24 +48,24 @@
 
             // autogegevens laten zien           
             echo "<tabel>";
-            foreach($autos as $auto)
+                foreach($autos as $auto)
                 {
                     echo "<tr>";
-                    echo "<td>" . $auto["autokenteken"] . " , "."</td>";
-                    echo "<td>" . $auto["autotype"] . " , "."</td>";
-                    echo "<td>" . $auto["automerk"] ." , ". "</td>";
-                    echo "<td>" . $auto["autokmstand"] . " , "."</td>";
-                    echo "<td>" . $auto["klantid"] . " . "."</td>";
-                    echo "<tr>";
+                    echo "<div style='margin-top: 20px; margin-bottom: -30px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Klantid: " . $auto["klantid"] . "<br/>";
+                    echo "<td>"."Klantnaam: " . $auto["autokenteken"] . "</td>"."<br/>";
+                    echo "<td>"."Klantadres: " . $auto["autotype"] . "</td>"."<br/>";
+                    echo "<td>"."Klantpostcode: " . $auto["automerk"] . "</td>"."<br/>";
+                    echo "<td>"."Klantplaats: " . $auto["autokmstand"] . "</td>"."<br/>"."<br/>";
+                    echo "</br></div>";
+                    echo "</br>";
                 }
-            echo "</tabel><br />";
-
+            echo "</tabel>";
+ 
             echo "<form action='delete-auto3.php' method='post'>";
+ 
                 echo "<input type='hidden' name='autokenteken' value=$autokenteken>";
                 echo "<input type='hidden'name='verwijder' value='0'>";
-                echo "<input type='checkbox' name='verwijder' value='1'>";
-                echo "Verwijder deze auto. <br />";
-                echo "<input type='submit'>";
+                echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='submit' class='btn btn-danger'><a style='color: white; text-decoration: none'>Verwijderen</a></button></div>";
             echo "</form>";
         ?>
 

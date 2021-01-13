@@ -28,13 +28,6 @@
         </div>
     </nav>
     <!-- Einde navigatie menu -->
-
-    <h1>garage delete klant 2</h1>
-        <p>
-           Op klantid gegevens zoeken uit de
-           tabel klanten van de database garage
-           zodat ze verwijderd kunnen worden.
-        </p>
         <?php
             // klantid uit het formulier halen --------------
             $klantid = $_POST["klantidvak"];
@@ -42,7 +35,7 @@
             // klantgegevens uit de tabel halen -------------
             require_once "connection.php";
  
-             $klanten = $conn->prepare("
+            $klanten = $conn->prepare("
                                         select klantid,
                                                klantnaam,
                                                klantadres,
@@ -54,25 +47,24 @@
  
             // klantgegevens laten zien -----------
             echo "<tabel>";
-            foreach($klanten as $klant)
+                foreach($klanten as $klant)
                 {
                     echo "<tr>";
-                    echo "<td>" . $klant["klantid"] . " , "."</td>";
-                    echo "<td>" . $klant["klantnaam"] ." , ". "</td>";
-                    echo "<td>" . $klant["klantadres"] . " , "."</td>";
-                    echo "<td>" . $klant["klantpostcode"] ." , ". "</td>";
-                    echo "<td>" . $klant["klantplaats"] ." . ". "</td>";
-                    echo "<tr>";
+                    echo "<div style='margin-top: 20px; margin-bottom: -30px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>Klantid: " . $klant["klantid"] . "<br/>";
+                    echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
+                    echo "<td>"."Klantadres: " . $klant["klantadres"] . "</td>"."<br/>";
+                    echo "<td>"."Klantpostcode: " . $klant["klantpostcode"] . "</td>"."<br/>";
+                    echo "<td>"."Klantplaats: " . $klant["klantplaats"] . "</td>"."<br/>"."<br/>";
+                    echo "</br></div>";
+                    echo "</br>";
                 }
-            echo "</tabel><br />";
+            echo "</tabel>";
  
             echo "<form action='dbdelete3.php' method='post'>";
  
                 echo "<input type='hidden' name='klantidvak' value=$klantid>";
                 echo "<input type='hidden'name='verwijdervak' value='0'>";
-                echo "<input type='checkbox' name='verwijdervak' value='1'>";
-                echo "Verwijder deze klant. <br />";
-                echo "<input type='submit'>";
+                echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='submit' class='btn btn-danger'><a style='color: white; text-decoration: none'>Verwijderen</a></button></div>";
             echo "</form>";
         ?>
 
