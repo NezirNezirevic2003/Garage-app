@@ -47,14 +47,15 @@
         echo "<tabel>";
             foreach($klanten as $klant)
         {
-        echo "<tr>";
-        echo "<td>" . $klant["klantnaam"] ."</td>"."<br/>"."<br/>";
-        echo "<td>" . $klant["autotype"] . "</td>"."<br/>"."<br/>";
-        echo "<tr>";
+            echo "<tr>";
+            echo "<div style='margin-top: 20px; margin-bottom: 20px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'><br/>";
+            echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
+            echo "<td>"."Autotype: " . $klant["autotype"] . "</td>"."<br/>";
+            echo "</br></div>";
         }
 
     echo "</tabel>";
-        echo "<a href='gar-menu.php'> terug naar het menu </a>";
+            echo "<div class='container'><style'margin-top: 80px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbread.php'>Terug naar menu</a></style></div>";
     ?>
 
 

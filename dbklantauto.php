@@ -3,7 +3,7 @@
 <head>
 	<meta name="author" content="Anjo Eijeriks">
     <meta charset="UTF-8">
-    <title>auto-eigenaar1.php</title>
+    <title>Klanten lijst</title>
     <link rel="stylesheet" href="./public/style.scss">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -26,7 +26,6 @@
             </div>
         </div>
     </nav>
-
 	<?php
         require_once "connection.php";
  
@@ -40,14 +39,16 @@
         echo "<tabel>";
             foreach($klanten as $klant)
         {
-        echo "<tr>";
-        echo "<td>" . $klant["klantnaam"] ."</td>"."<br/>"."<br/>";
-        echo "<td>" . $klant["automerk"] . "</td>"."<br/>"."<br/>";
-        echo "<tr>";
+            echo "<tr>";
+            echo "<div style='margin-top: 20px; margin-bottom: -2px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'><br/>";
+            echo "<td>"."Klantnaam: " . $klant["klantnaam"] . "</td>"."<br/>";
+            echo "<td>"."Automerk: " . $klant["automerk"] . "</td>"."<br/>";
+            echo "</br></div>";
         }
 
     echo "</tabel>";
-        echo "<a href='gar-menu.php'> terug naar het menu </a>";
+    echo "</br>";
+        echo "<div class='container'><style'margin-top: 80px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbread.php'>Terug naar menu</a></style></div>";
     ?>
 
     <!-- Bootstrap scripts -->
