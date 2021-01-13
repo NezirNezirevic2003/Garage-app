@@ -31,10 +31,9 @@
         <?php
             // gegevens uit het formulier halen
             $autokenteken = $_POST["autokenteken"];
-            $verwijderen = $_POST["verwijder"];
 
             // autogegevens verwijderen
-            if($verwijderen)
+            if($autokenteken)
             {
                 require_once "connection.php";
 

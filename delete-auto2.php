@@ -55,7 +55,7 @@
                     echo "<td>"."Klantnaam: " . $auto["autokenteken"] . "</td>"."<br/>";
                     echo "<td>"."Klantadres: " . $auto["autotype"] . "</td>"."<br/>";
                     echo "<td>"."Klantpostcode: " . $auto["automerk"] . "</td>"."<br/>";
-                    echo "<td>"."Klantplaats: " . $auto["autokmstand"] . "</td>"."<br/>"."<br/>";
+                    echo "<td>"."Kmstand: " . $auto["autokmstand"] . "</td>"."<br/>"."<br/>";
                     echo "</br></div>";
                     echo "</br>";
                 }
@@ -64,7 +64,6 @@
             echo "<form action='delete-auto3.php' method='post'>";
  
                 echo "<input type='hidden' name='autokenteken' value=$autokenteken>";
-                echo "<input type='hidden'name='verwijder' value='0'>";
                 echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='submit' class='btn btn-danger'><a style='color: white; text-decoration: none'>Verwijderen</a></button></div>";
             echo "</form>";
         ?>
