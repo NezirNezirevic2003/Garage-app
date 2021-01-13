@@ -27,6 +27,7 @@
     </nav>
     <!-- Einde Navigatie menu -->
 
+    <!--zoeken via autokenteken-->
     <div class="container">
     <form style="margin-top: 50px" action="update-auto2.php" method="post" class="form-inline">
        <div class="form-group mx-sm-12 mb-10">

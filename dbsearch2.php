@@ -25,6 +25,7 @@
         </div>
     </nav>
     <?php
+            // gegevens uit het formulier halen
             $klantid = $_POST["klantidvak"];
 
             require_once "connection.php";

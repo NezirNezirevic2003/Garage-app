@@ -37,7 +37,7 @@
             // klantid uit het formulier halen --------------
             $klantid = $_POST["klantidvak"];
  
-            // klantgegevens uit de tabel halen -------------
+             // database gegevens includen.          
             require_once "connection.php";
  
              $klanten = $conn->prepare("

@@ -50,7 +50,7 @@
                                         where autokenteken = :autokenteken");
             $autos->execute(["autokenteken" => $autokenteken]);
 
-            // autogegevens laten zien           
+            // autogegevens verwijderen          
             echo "<tabel>";
             foreach($autos as $auto)
                 {

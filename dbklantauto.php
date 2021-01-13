@@ -26,8 +26,10 @@
     </nav>
 
 	<?php
+        
         require_once "connection.php";
- 
+        
+        // gegevens uit het formulier halen
         $klanten= $conn->prepare("SELECT klantnaam,
                               a.automerk , a.autotype
                               FROM   klantgegevens

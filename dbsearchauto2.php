@@ -28,6 +28,7 @@
     </nav>
 
     <?php
+             // gegevens uit het formulier halen
             $autokenteken = $_POST["autokenteken"];
 
             require_once "connection.php";

@@ -26,6 +26,7 @@
     </nav>
     <!-- Einde Navigatie menu -->
     <?php
+        // gegevens uit het formulier halen
     require_once "connection.php";
       $klantid = $_POST["klantid"];
       

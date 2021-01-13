@@ -31,8 +31,11 @@
 </html>
 
 <?php
+
+         // Database toevoegen.
         require_once "connection.php";
- 
+        
+        // gegevens uit het formulier halen
         $klanten= $conn->prepare("SELECT 
                                         klantnaam,
                                         a.autotype

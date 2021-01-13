@@ -28,6 +28,8 @@
     </nav>
     <!-- Einde Navigatie menu -->
     <?php 
+
+         // Database toevoegen.
         require_once "connection.php";
                 
         $autokenteken= $_POST["autokenteken"];
@@ -43,7 +45,7 @@
         echo "<form style='margin-top: 50px;' action ='update-auto3.php' method='post'>";
         foreach ($autos as $auto){
         
-
+         // autogegevens updaten
          echo "<div class='container'><label for='validationCustom01'>Autokenteken</label><input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default'" ;
          echo "name = 'autokenteken'";
          echo "value = '" .$auto["autokenteken"]. "' " ;

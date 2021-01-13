@@ -28,7 +28,6 @@
     <!-- Einde Navigatie menu -->
 <?php 
     //autogegevens uit het formulier halen.
-
     $autokenteken= $_POST["autokenteken"];
     $autotype= $_POST["autotype"];
     $automerk= $_POST["automerk"];
