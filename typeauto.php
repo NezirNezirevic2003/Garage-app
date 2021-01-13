@@ -33,9 +33,10 @@
 <?php
         require_once "connection.php";
  
-        $klanten= $conn->prepare("SELECT klantnaam,
-                                a.autotype
-                              FROM   klantgegevens
+        $klanten= $conn->prepare("SELECT 
+                                        klantnaam,
+                                        a.autotype
+                              FROM      klantgegevens
                               INNER JOIN autogegevens a on klantgegevens.klantid = a.klantid
         ");
 
