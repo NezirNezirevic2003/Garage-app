@@ -26,50 +26,42 @@
         </div>
     </nav>
     <!-- Einde navigatie menu -->
-
     <?php
-            // Userid uit het formulier halen
+            // gegevens uit het formulier halen
             $userid = $_POST["useridvak"];
 
-            // Userid uit de tabel halen.
             require_once "connection.php";
 
-            // Gebruiker gegevens uit de tabel halen
-             $gebruikers = $conn->prepare("
+            $gebruikers = $conn->prepare("
                                         select userid,
                                                naam,
                                                wachtwoord,
                                                email,
                                                functie
                                         from   gebruikers
-                                        where userid = :userid");
+                                        where  userid = :userid");
             $gebruikers->execute(["userid" => $userid]);
 
-            // Gebruiker verwijderen          
             echo "<tabel>";
-                foreach($gebruikers as $gebruiker)
-                {
-                    echo "<tr>";
-                    echo "<div style='margin-top: 20px; margin-bottom: -30px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>userid: " . $gebruiker["userid"] . "<br/>";
-                    echo "<td>"."naam: " . $gebruiker["naam"] . "</td>"."<br/>";
-                    echo "<td>"."wachtwoord: " . $gebruiker["wachtwoord"] . "</td>"."<br/>";
-                    echo "<td>"."email: " . $gebruiker["email"] . "</td>"."<br/>";
-                    echo "<td>"."functie: " . $gebruiker["functie"] . "</td>"."<br/>"."<br/>";
-                    echo "</br></div>";
-                    echo "</br>";
-                }
-            echo "</tabel>";
- 
-            echo "<form action='dbdeletegebruiker3.php' method='post'>";
- 
-                echo "<input type='hidden' name='userid' value=$userid>";
-                echo "<div class='container'><button style='margin-top: 20px; margin-bottom: 60px;' type='submit' class='btn btn-danger'><a style='color: white; text-decoration: none'>Verwijderen</a></button></div>";
-            echo "</form>";
-        ?>
-
+            foreach($gebruikers as $gebruiker)
+            {
+                echo "<tr>";
+                echo "<div style='margin-top: 20px; margin-bottom: -30px; border: 1px solid #dedede; border-radius: 5px; background-color: #dedede;' class='container'>userid: " . $gebruiker["userid"] . "<br/>";
+                echo "<td>"."naam: " . $gebruiker["naam"] . "</td>"."<br/>";
+                echo "<td>"."wachtwoord: " . $gebruiker["wachtwoord"] . "</td>"."<br/>";
+                echo "<td>"."email: " . $gebruiker["email"] . "</td>"."<br/>";
+                echo "<td>"."functie: " . $gebruiker["functie"] . "</td>"."<br/>"."<br/>";
+                echo "</br></div>";
+                echo "<div class='container'><button style='margin-top: -30px;'type='button' class='btn btn-success'><a style='color: white; text-decoration: none;' href='dbupdategebruiker1.php?id=[userid]'>Bewerken</a></button>";
+                echo "<button style='margin-left: 10px; margin-top: -30px;' type='button' class='btn btn-danger'><a style='color: white; text-decoration: none;' href='dbdeletegebruiker1.php?id=[userid]'>Verwijderen</a></button></div>";
+                echo "</br>";
+            } 
+        echo "</tabel>";
+        echo "<div class='container'><style'margin-top: 20px; margin-bottom: 60px; margin-left: 20px' type='button' class='btn btn-primary'><a style='color: white; text-decoration: none' href='dbsearchgebruiker1.php'>Terug naar zoeken</a></style></div>";
+                  
+?>
 
     <!-- Bootstrap scripts -->
-    <script src="./public/validation.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

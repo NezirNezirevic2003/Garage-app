@@ -20,6 +20,7 @@
               <a href="dbreadgebruiker.php" class="nav-item nav-link">Read</a>
               <a href="dbupdategebruiker1.php" class="nav-item nav-link">Update</a>
               <a href="dbdeletegebruiker1.php" class="nav-item nav-link">Delete</a>
+              <a href="dbsearchgebruiker1.php" class="nav-item nav-link">Search</a>
              
             </div>
         </div>
