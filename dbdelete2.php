@@ -33,11 +33,7 @@
             ## Klantid uit het formulier halen
             $klantid = $_POST["klantidvak"];
  
-<<<<<<< HEAD
-             // database gegevens includen.          
-=======
             ## Klantgegevens uit de tabel halen 
->>>>>>> bc42e911608598b5dd99441b8729fe240f70e9c5
             require_once "connection.php";
  
             $klanten = $conn->prepare("

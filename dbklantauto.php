@@ -32,11 +32,7 @@
         
         require_once "connection.php";
         
-<<<<<<< HEAD
-        // gegevens uit het formulier halen
-=======
         ## Klantgegevens en autogegevens worden voorbereid en daarna worden alleen maar bepaalde dingen eruitgehaald
->>>>>>> bc42e911608598b5dd99441b8729fe240f70e9c5
         $klanten= $conn->prepare("SELECT klantnaam,
                               a.automerk , a.autotype
                               FROM   klantgegevens
